@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Casey J. Wichman | Derek Wietelman</title>
-    <link>/author/casey-j.-wichman/</link>
-      <atom:link href="/author/casey-j.-wichman/index.xml" rel="self" type="application/rss+xml" />
-    <description>Casey J. Wichman</description>
+    <title>Daniel A. Brent | Derek Wietelman</title>
+    <link>/author/daniel-a.-brent/</link>
+      <atom:link href="/author/daniel-a.-brent/index.xml" rel="self" type="application/rss+xml" />
+    <description>Daniel A. Brent</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 23 Jan 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
-      <title>Casey J. Wichman</title>
-      <link>/author/casey-j.-wichman/</link>
+      <title>Daniel A. Brent</title>
+      <link>/author/daniel-a.-brent/</link>
     </image>
     
     <item>
@@ -17,14 +17,6 @@
       <link>/publication/bbr/</link>
       <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
       <guid>/publication/bbr/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Smart Thermostats, Automation and Time-varying Prices</title>
-      <link>/publication/ecobee/</link>
-      <pubDate>Fri, 07 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>/publication/ecobee/</guid>
       <description></description>
     </item>
     
