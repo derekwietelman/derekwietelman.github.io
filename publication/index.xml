@@ -5,7 +5,7 @@
     <link>/publication/</link>
       <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 23 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 07 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Publications</title>
@@ -13,18 +13,18 @@
     </image>
     
     <item>
-      <title>Who Pays for Conservation Pricing? Evidence from Nonlinear Water Rates</title>
-      <link>/publication/bbr/</link>
-      <pubDate>Tue, 23 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>/publication/bbr/</guid>
+      <title>Smart Thermostats, Automation and Time-Varying Prices</title>
+      <link>/publication/ecobee/</link>
+      <pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>/publication/ecobee/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Smart Thermostats, Automation and Time-varying Prices</title>
-      <link>/publication/ecobee/</link>
-      <pubDate>Fri, 07 Apr 2023 00:00:00 +0000</pubDate>
-      <guid>/publication/ecobee/</guid>
+      <title>Conservation and Distributional Consequences of Pricing Scarce Water During Droughts</title>
+      <link>/publication/bbr/</link>
+      <pubDate>Tue, 21 May 2024 00:00:00 +0000</pubDate>
+      <guid>/publication/bbr/</guid>
       <description></description>
     </item>
     
