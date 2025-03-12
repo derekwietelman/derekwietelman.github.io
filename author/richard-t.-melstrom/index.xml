@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Richard T. Melstrom | Derek Wietelman</title>
-    <link>/author/richard-t.-melstrom/</link>
-      <atom:link href="/author/richard-t.-melstrom/index.xml" rel="self" type="application/rss+xml" />
+    <link>//localhost:4321/author/richard-t.-melstrom/</link>
+      <atom:link href="//localhost:4321/author/richard-t.-melstrom/index.xml" rel="self" type="application/rss+xml" />
     <description>Richard T. Melstrom</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>//localhost:4321/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Richard T. Melstrom</title>
-      <link>/author/richard-t.-melstrom/</link>
+      <link>//localhost:4321/author/richard-t.-melstrom/</link>
     </image>
     
     <item>
       <title>The Effect of Listing the Lesser Prairie Chicken as a Threatened Species on Rural Property Values</title>
-      <link>/publication/chicken/</link>
+      <link>//localhost:4321/publication/chicken/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>/publication/chicken/</guid>
+      <guid>//localhost:4321/publication/chicken/</guid>
       <description></description>
     </item>
     

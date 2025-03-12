@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yusuke Kuwayama | Derek Wietelman</title>
-    <link>/author/yusuke-kuwayama/</link>
-      <atom:link href="/author/yusuke-kuwayama/index.xml" rel="self" type="application/rss+xml" />
+    <link>//localhost:4321/author/yusuke-kuwayama/</link>
+      <atom:link href="//localhost:4321/author/yusuke-kuwayama/index.xml" rel="self" type="application/rss+xml" />
     <description>Yusuke Kuwayama</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>//localhost:4321/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Yusuke Kuwayama</title>
-      <link>/author/yusuke-kuwayama/</link>
+      <link>//localhost:4321/author/yusuke-kuwayama/</link>
     </image>
     
     <item>
       <title>Trends in Nutrient Pollution as a Source of Potential Water Quality Damages: A Case Study of Texas, USA</title>
-      <link>/publication/texas/</link>
+      <link>//localhost:4321/publication/texas/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/texas/</guid>
+      <guid>//localhost:4321/publication/texas/</guid>
       <description></description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Michelle H.W. Lee | Derek Wietelman</title>
-    <link>/author/michelle-h.w.-lee/</link>
-      <atom:link href="/author/michelle-h.w.-lee/index.xml" rel="self" type="application/rss+xml" />
+    <link>//localhost:4321/author/michelle-h.w.-lee/</link>
+      <atom:link href="//localhost:4321/author/michelle-h.w.-lee/index.xml" rel="self" type="application/rss+xml" />
     <description>Michelle H.W. Lee</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 01 May 2019 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>//localhost:4321/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Michelle H.W. Lee</title>
-      <link>/author/michelle-h.w.-lee/</link>
+      <link>//localhost:4321/author/michelle-h.w.-lee/</link>
     </image>
     
     <item>
       <title>Public Opinion Toward Hydraulic Fracturing: The Effect of Beyond Compliance and Voluntary Third-Party Certification</title>
-      <link>/publication/fracking/</link>
+      <link>//localhost:4321/publication/fracking/</link>
       <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/fracking/</guid>
+      <guid>//localhost:4321/publication/fracking/</guid>
       <description></description>
     </item>
     
