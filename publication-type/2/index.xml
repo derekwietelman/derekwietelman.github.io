@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2 | Derek Wietelman</title>
-    <link>/publication-type/2/</link>
-      <atom:link href="/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
+    <link>//localhost:4321/publication-type/2/</link>
+      <atom:link href="//localhost:4321/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 07 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <url>//localhost:4321/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>2</title>
-      <link>/publication-type/2/</link>
+      <link>//localhost:4321/publication-type/2/</link>
     </image>
     
     <item>
       <title>Smart Thermostats, Automation, and Time-Varying Prices</title>
-      <link>/publication/ecobee/</link>
+      <link>//localhost:4321/publication/ecobee/</link>
       <pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>/publication/ecobee/</guid>
+      <guid>//localhost:4321/publication/ecobee/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Trends in Nutrient Pollution as a Source of Potential Water Quality Damages: A Case Study of Texas, USA</title>
-      <link>/publication/texas/</link>
+      <link>//localhost:4321/publication/texas/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/texas/</guid>
+      <guid>//localhost:4321/publication/texas/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Energy Paradox in Seemingly Competitive Industries: The Use of Energy-Efficient Equipment on Heavy-Duty Tractor Trailers</title>
-      <link>/publication/trucks/</link>
+      <link>//localhost:4321/publication/trucks/</link>
       <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/trucks/</guid>
+      <guid>//localhost:4321/publication/trucks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Public Opinion Toward Hydraulic Fracturing: The Effect of Beyond Compliance and Voluntary Third-Party Certification</title>
-      <link>/publication/fracking/</link>
+      <link>//localhost:4321/publication/fracking/</link>
       <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/fracking/</guid>
+      <guid>//localhost:4321/publication/fracking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Effect of Listing the Lesser Prairie Chicken as a Threatened Species on Rural Property Values</title>
-      <link>/publication/chicken/</link>
+      <link>//localhost:4321/publication/chicken/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>/publication/chicken/</guid>
+      <guid>//localhost:4321/publication/chicken/</guid>
       <description></description>
     </item>
     
