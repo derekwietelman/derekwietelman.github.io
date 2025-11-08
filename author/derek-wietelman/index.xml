@@ -12,15 +12,5 @@
       <link>//localhost:4321/author/derek-wietelman/</link>
     </image>
     
-    <item>
-      <title>Derek Wietelman</title>
-      <link>//localhost:4321/author/derek-wietelman/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/author/derek-wietelman/</guid>
-      <description>&lt;p&gt;Welcome! I am a Ph.D. candidate in the Department of Agricultural and Resource Economics at the University of Maryland. I am a candidate on the 2025-2026 economics job market.&lt;/p&gt;
-&lt;p&gt;I am an applied microeconomist specializing in environmental and resource economics, with a particular interest in the economics of water and energy resources. In my current research, I use applied econometric methods to understand how demand for water and energy are shaped by both price and non-price policy interventions. I also work on topics related to the economics of water quality.&lt;/p&gt;
-</description>
-    </item>
-    
   </channel>
 </rss>
