@@ -21,10 +21,34 @@
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:4321/publication-type/3/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:4321/authors/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
+    <lastmod>2025-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:4321/publication/trading/</loc>
+    <lastmod>2025-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:4321/author/david-newburn/</loc>
+    <lastmod>2025-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:4321/author/derek-c.-wietelman/</loc>
+    <lastmod>2025-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:4321/author/erik-lichtenberg/</loc>
+    <lastmod>2025-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:4321/author/haoluan-wang/</loc>
+    <lastmod>2025-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:4321/publication_types/</loc>
+    <lastmod>2025-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:4321/publication/</loc>
+    <lastmod>2025-07-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>//localhost:4321/author/youngho-kim/</loc>
+    <lastmod>2025-07-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:4321/author/casey-j.-wichman/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
@@ -33,15 +57,6 @@
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:4321/author/daniel-a.-brent/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:4321/author/derek-c.-wietelman/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:4321/publication_types/</loc>
-    <lastmod>2025-03-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>//localhost:4321/publication/</loc>
     <lastmod>2025-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>//localhost:4321/publication-type/2/</loc>
