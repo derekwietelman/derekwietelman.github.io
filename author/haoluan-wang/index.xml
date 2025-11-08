@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Haoluan Wang | Derek Wietelman</title>
+    <link>//localhost:4321/author/haoluan-wang/</link>
+      <atom:link href="//localhost:4321/author/haoluan-wang/index.xml" rel="self" type="application/rss+xml" />
+    <description>Haoluan Wang</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 12 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>//localhost:4321/images/icon_hu_c9b7ae332ea53df6.png</url>
+      <title>Haoluan Wang</title>
+      <link>//localhost:4321/author/haoluan-wang/</link>
+    </image>
+    
+    <item>
+      <title>Conservation and Distributional Consequences of Pricing Scarce Water During Droughts</title>
+      <link>//localhost:4321/publication/trading/</link>
+      <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/publication/trading/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
