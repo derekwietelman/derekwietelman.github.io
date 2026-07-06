@@ -5,7 +5,7 @@
     <link>//localhost:4321/author/derek-c.-wietelman/</link>
       <atom:link href="//localhost:4321/author/derek-c.-wietelman/index.xml" rel="self" type="application/rss+xml" />
     <description>Derek C. Wietelman</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 12 Nov 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>//localhost:4321/images/icon_hu_c9b7ae332ea53df6.png</url>
       <title>Derek C. Wietelman</title>
@@ -13,35 +13,64 @@
     </image>
     
     <item>
-      <title>Derek C. Wietelman</title>
-      <link>//localhost:4321/author/derek-c.-wietelman/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/author/derek-c.-wietelman/</guid>
-      <description>&lt;p&gt;Welcome! I am a postdoctoral associate at the 
-&lt;a href=&#34;https://ibs.colorado.edu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Institute of Behavioral Science&lt;/a&gt; at the 
-&lt;a href=&#34;https://www.colorado.edu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;University of Colorado Boulder&lt;/a&gt;. In 2026, I received my Ph.D. from the 
-&lt;a href=&#34;https://arec.umd.edu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Department of Agricultural and Resource Economics&lt;/a&gt; at the 
-&lt;a href=&#34;https://umd.edu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;University of Maryland&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I am an applied microeconomist specializing in environmental and resource economics, with a particular interest in the economics of water and energy resources. In my current work, I&amp;rsquo;m unpacking the economics of drought-induced water conservation mandates, investigating how lead pipe remediation efforts by water utilities impact health and behavioral outcomes, and designing cost-share subsidies for water quality improvements.&lt;/p&gt;
-</description>
+      <title>Conservation and Distributional Consequences of Pricing Scarce Water During Droughts</title>
+      <link>//localhost:4321/publication/bbr/</link>
+      <pubDate>Wed, 12 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/publication/bbr/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Display Jupyter Notebooks with Academic</title>
-      <link>//localhost:4321/post/jupyter/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>//localhost:4321/post/jupyter/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from IPython.core.display import Image
-Image(&#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:4321/post/jupyter/index_1_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;Welcome to Academic!&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Welcome to Academic!
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&#34;install-python-and-jupyterlab&#34;&gt;Install Python and JupyterLab&lt;/h2&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://www.anaconda.com/distribution/#download-section&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Install Anaconda&lt;/a&gt; which includes Python 3 and JupyterLab.&lt;/p&gt;
+      <title>Emissions Trading Programs for Afforestation: Interactions with Federal Agricultural Conservation Programs</title>
+      <link>//localhost:4321/publication/trading/</link>
+      <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/publication/trading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Smart Thermostats, Automation, and Time-Varying Prices</title>
+      <link>//localhost:4321/publication/ecobee/</link>
+      <pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/publication/ecobee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Trends in Nutrient Pollution as a Source of Potential Water Quality Damages: A Case Study of Texas, USA</title>
+      <link>//localhost:4321/publication/texas/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/publication/texas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Energy Paradox in Seemingly Competitive Industries: The Use of Energy-Efficient Equipment on Heavy-Duty Tractor Trailers</title>
+      <link>//localhost:4321/publication/trucks/</link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/publication/trucks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Public Opinion Toward Hydraulic Fracturing: The Effect of Beyond Compliance and Voluntary Third-Party Certification</title>
+      <link>//localhost:4321/publication/fracking/</link>
+      <pubDate>Wed, 01 May 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/publication/fracking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Effect of Listing the Lesser Prairie Chicken as a Threatened Species on Rural Property Values</title>
+      <link>//localhost:4321/publication/chicken/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <guid>//localhost:4321/publication/chicken/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
+ JupyterLab.&lt;/p&gt;
 &lt;p&gt;Alternatively, install JupyterLab with &lt;code&gt;pip3 install jupyterlab&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;create-or-upload-a-jupyter-notebook&#34;&gt;Create or upload a Jupyter notebook&lt;/h2&gt;
 &lt;p&gt;Run the following commands in your Terminal, substituting &lt;code&gt;&amp;lt;MY-WEBSITE-FOLDER&amp;gt;&lt;/code&gt; and &lt;code&gt;&amp;lt;SHORT-POST-TITLE&amp;gt;&lt;/code&gt; with the file path to your Academic website folder and a short title for your blog post (use hyphens instead of spaces), respectively:&lt;/p&gt;
