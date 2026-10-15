@@ -1,0 +1,41 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Derek C. Wietelman
+  given: Derek
+  family: Wietelman
+role: Postdoctoral Associate
+bio: |
+  Derek Wietelman is a postdoctoral associate at the University of Colorado.
+
+affiliations:
+  - name: Institute of Behavioral Science, University of Colorado Boulder
+    url: https://ibs.colorado.edu
+
+links:
+  - icon: at-symbol
+    url: mailto:derek.wietelman@colorado.edu
+    label: E-mail Me
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=4fMH-1cAAAAJ
+  - icon: brands/github
+    url: https://github.com/derekwietelman
+  - icon: academicons/cv
+    url: /files/cv.pdf
+
+interests:
+  - Environmental and resource economics
+  - Applied microeconomics
+  - Water resources
+
+education:
+  - degree: Ph.D. in agricultural and resource economics
+    institution: University of Maryland
+    year: 2026
+  - degree: Master of Public Affairs
+    institution: Indiana University
+    year: 2018
+  - degree: BS statistics; BA political science
+    institution: Oklahoma State University
+    year: 2016
