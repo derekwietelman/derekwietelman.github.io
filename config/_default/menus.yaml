@@ -1,0 +1,15 @@
+# Navigation links in the top menu. Lower weight = further left.
+# Links starting with `/#` jump to a homepage section by its `id`.
+main:
+  - name: CV
+    url: /files/cv.pdf
+    weight: 10
+  - name: Working Papers
+    url: /#working-papers
+    weight: 20
+  - name: Publications
+    url: /#publications
+    weight: 30
+  - name: Contact
+    url: /#contact
+    weight: 50
