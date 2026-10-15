@@ -1,0 +1,9 @@
+{{/* The site always uses the theme set in params.yaml (dark mode, Marine colors).
+     Clear any light/dark or theme choice a visitor's browser saved while the
+     switchers were still on the site, so it can't override the default. */}}
+<script>
+  try {
+    localStorage.removeItem("wc-color-theme");
+    localStorage.removeItem("hb-theme-pack");
+  } catch (e) {}
+</script>
