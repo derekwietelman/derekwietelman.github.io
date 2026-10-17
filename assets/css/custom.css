@@ -37,6 +37,11 @@
   display: none;
 }
 
+/* Hide the "Biography" heading (and its icon) above the intro text. */
+#about .flex.items-center.gap-4.mb-8 {
+  display: none;
+}
+
 /* Less vertical space. Section padding itself is set by `layout.spacing`
    in params.yaml; these trim the extra space individual blocks add. */
 
