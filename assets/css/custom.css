@@ -1,15 +1,64 @@
 /* Widen text on large screens. These are max-widths only, so phones and
    tablets (already narrower than the caps) are unaffected. */
 
-/* Biography: theme caps lines at 65 characters; loosen to 80. */
+/* Biography: no line-length cap, so the text fills its column. Font is
+   larger than the theme's 1rem (phones) / 1.125rem (larger screens). */
 #about .prose {
-  max-width: 80ch;
+  max-width: none;
+  font-size: 1.125rem;
+}
+@media (min-width: 640px) {
+  #about .prose {
+    font-size: 1.25rem;
+  }
 }
 
 /* Working papers & publications: theme caps the list at 48rem (768px). */
 #working-papers .container.max-w-3xl,
 #publications .container.max-w-3xl {
-  max-width: 56rem; /* 896px */
+  max-width: 68rem; /* 1088px */
+}
+
+/* Larger citation text (theme default is 1rem). */
+#working-papers .view-citation,
+#publications .view-citation {
+  font-size: 1.125rem;
+}
+@media (min-width: 640px) {
+  #working-papers .view-citation,
+  #publications .view-citation {
+    font-size: 1.25rem;
+  }
+}
+
+/* Hide the profile link icons under the name/affiliation; they're in the
+   Contact section's "Find me on" instead. (Still shown on publication pages.) */
+#about .flex.flex-wrap.justify-center.gap-4 {
+  display: none;
+}
+
+/* Less vertical space. Section padding itself is set by `layout.spacing`
+   in params.yaml; these trim the extra space individual blocks add. */
+
+/* Biography: theme adds up to 8rem above and below. */
+#about .resume-biography {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Gap between a list's heading and its first entry (theme: 5rem). */
+#working-papers .container.max-w-3xl,
+#publications .container.max-w-3xl {
+  margin-top: 1rem;
+}
+
+/* Contact: theme adds up to 5rem above and below, plus 3rem under the title. */
+#contact .max-w-7xl.mx-auto {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#contact .text-center.mb-12 {
+  margin-bottom: 2rem;
 }
 
 /* Tighter side padding on phones (theme default is 1.5rem). */

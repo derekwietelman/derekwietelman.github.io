@@ -58,18 +58,27 @@ sections:
     id: contact
     content:
       title: Contact
-      visit_title: Office
+      visit_title: Office Mailing Address
       connect_title: Connect
       address:
         lines:
-          - Jessor Building, 483 UCB
-          - Boulder, CO 80309
-          - United States
+          - Institute of Behavioral Science
+          - University of Colorado Boulder
+          - 483 UCB
+          - Boulder, CO 80309-0483
       email: derek.wietelman@colorado.edu
       social:
-        - icon: academicons/google-scholar
-          url: https://scholar.google.com/citations?user=4fMH-1cAAAAJ
+        - icon: hero/building-library
+          url: https://ibs.colorado.edu/people/derek-wietelman/
+          label: CU Boulder profile
         - icon: brands/github
           url: https://github.com/derekwietelman
+          label: GitHub
+        - icon: academicons/google-scholar
+          url: https://scholar.google.com/citations?user=4fMH-1cAAAAJ
+          label: Google Scholar
+        - icon: brands/linkedin
+          url: https://www.linkedin.com/in/derek-wietelman-2b351b146
+          label: LinkedIn
       show_form: false
 ---
