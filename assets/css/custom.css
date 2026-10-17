@@ -1,0 +1,22 @@
+/* Widen text on large screens. These are max-widths only, so phones and
+   tablets (already narrower than the caps) are unaffected. */
+
+/* Biography: theme caps lines at 65 characters; loosen to 80. */
+#about .prose {
+  max-width: 80ch;
+}
+
+/* Working papers & publications: theme caps the list at 48rem (768px). */
+#working-papers .container.max-w-3xl,
+#publications .container.max-w-3xl {
+  max-width: 56rem; /* 896px */
+}
+
+/* Tighter side padding on phones (theme default is 1.5rem). */
+@media (max-width: 767px) {
+  #working-papers .items-center.px-6,
+  #publications .items-center.px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

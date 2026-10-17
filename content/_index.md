@@ -9,7 +9,7 @@ sections:
   - block: resume-biography-3
     id: about
     content:
-      # Profile details (name, role, interests, education, links) live in `data/authors/me.yaml`.
+      # Profile details (name, role, links) live in `data/authors/me.yaml`.
       username: me
       text: |-
         Welcome! I am a postdoctoral associate at the [Institute of Behavioral Science](https://ibs.colorado.edu) at the [University of Colorado Boulder](https://www.colorado.edu). In 2026, I received my Ph.D. from the [Department of Agricultural and Resource Economics](https://arec.umd.edu) at the [University of Maryland](https://umd.edu).
@@ -20,8 +20,6 @@ sections:
         url: /files/cv.pdf
       headings:
         about: Biography
-        education: Education
-        interests: Interests
     design:
       background:
         gradient_mesh:
