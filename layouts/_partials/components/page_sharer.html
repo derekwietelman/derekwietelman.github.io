@@ -1,0 +1,38 @@
+{{/* Override of the theme's share buttons (X, Facebook, etc.): a "Copy link" button instead,
+     plus a "Share" button that opens the device's own share menu where the browser supports it. */}}
+{{ if ne .Params.share false }}
+{{ $btn := "m-1 inline-flex items-center gap-2 rounded-md bg-neutral-300 px-3 py-1.5 text-base text-neutral-700 cursor-pointer hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800" }}
+<section class="flex flex-row flex-wrap justify-center pt-4" data-share-url="{{ .Permalink }}" data-share-title="{{ .Title }}">
+  <button type="button" class="{{ $btn }}" data-share-copy>
+    {{ partial "functions/get_icon" (dict "name" "hero/link" "attributes" "style=\"height: 1em;\"") }}
+    <span>Copy link</span>
+  </button>
+  <button type="button" class="{{ $btn }}" data-share-native hidden>
+    {{ partial "functions/get_icon" (dict "name" "hero/share" "attributes" "style=\"height: 1em;\"") }}
+    <span>Share</span>
+  </button>
+</section>
+<script>
+  (function () {
+    var box = document.currentScript.previousElementSibling;
+    var url = box.dataset.shareUrl, title = box.dataset.shareTitle;
+    var copyBtn = box.querySelector("[data-share-copy]");
+    var copyLabel = copyBtn.querySelector("span");
+    copyBtn.addEventListener("click", function () {
+      navigator.clipboard.writeText(url).then(function () {
+        copyLabel.textContent = "Link copied!";
+        setTimeout(function () { copyLabel.textContent = "Copy link"; }, 2000);
+      }, function () {
+        window.prompt("Copy this link:", url);
+      });
+    });
+    var shareBtn = box.querySelector("[data-share-native]");
+    if (navigator.share) {
+      shareBtn.hidden = false;
+      shareBtn.addEventListener("click", function () {
+        navigator.share({ title: title, url: url }).catch(function () {});
+      });
+    }
+  })();
+</script>
+{{ end }}
