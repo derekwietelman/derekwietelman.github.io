@@ -1,0 +1,5 @@
+# Overrides of the theme's English labels (i18n/en.yaml in the HugoBlox blox module).
+
+# Publication type shown on working paper pages (publication_types: article). Theme: "Preprint".
+- id: pub_article
+  translation: Working Paper
