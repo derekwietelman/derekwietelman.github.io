@@ -1,0 +1,10 @@
+{{/* Override of the theme's 404 page: a short message and a link home, instead of a list of "latest" pages. */}}
+{{- define "main" -}}
+{{/* Exclude 404 page from search indexing */}}
+<div data-pagefind-ignore class="flex flex-col justify-center">
+  <article class="container mx-auto prose prose-slate lg:prose-xl dark:prose-invert">
+    <h1 class="lg:text-6xl">{{ i18n "page_not_found" }}</h1>
+    <p>Sorry, this page doesn't exist. <a href="{{ "/" | relLangURL }}">Go to the homepage</a>.</p>
+  </article>
+</div>
+{{- end -}}

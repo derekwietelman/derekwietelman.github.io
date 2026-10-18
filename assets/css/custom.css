@@ -43,14 +43,6 @@ article main:has(> .max-w-prose.grid) > .container.prose > .max-w-prose {
   max-width: none;
 }
 
-/* Paper pages: show the Type ("Working Paper", "Journal article") as plain
-   text instead of a link to the list of papers of that type. */
-article main > .max-w-prose.grid a[href*="/publication_types/"] {
-  pointer-events: none;
-  color: inherit;
-  text-decoration: none;
-}
-
 /* Larger citation text (theme default is 1rem). */
 #working-papers .view-citation,
 #publications .view-citation {
