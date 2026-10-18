@@ -239,7 +239,7 @@ hugoblox:
   # Regional formatting preferences
   # ────────────────────────────────────────────────────────────────────────────
   locale:
-    date_format: "Jan 2, 2006" # Go time format
+    date_format: "January 2006" # Go time format (full month name and year)
     time_format: "3:04 PM"
     address_format: en-us
 

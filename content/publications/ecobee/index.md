@@ -20,9 +20,10 @@ hugoblox:
 links:
 - type: pdf
   url: /files/Blonz_etal_2025.pdf
-- type: code
-  url: https://www.openicpsr.org/openicpsr/project/197966/version/V1/view
 - type: custom
   label: Appendix
+  icon: hero/document-text
   url: /files/Blonz_etal_2025_appendix.pdf
+- type: code
+  url: https://www.openicpsr.org/openicpsr/project/197966/version/V1/view
 ---
