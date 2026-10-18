@@ -1,0 +1,10 @@
+{{/* Override of the theme's get_summary: same fallback order (summary > description > abstract > .Summary),
+     but a front matter value is rendered from Markdown to plain text, so *italics* in an abstract don't show
+     up as literal asterisks in page descriptions, link previews, and list cards. */}}
+{{ $summary := .Params.summary | default .Params.description | default .Params.abstract }}
+{{ with $summary }}
+  {{ $summary = . | markdownify | plainify | htmlUnescape }}
+{{ else }}
+  {{ $summary = .Summary }}
+{{ end }}
+{{ return $summary }}
