@@ -58,7 +58,7 @@ sections:
     id: contact
     content:
       title: Contact
-      visit_title: Office Mailing Address
+      visit_title: Mailing Address
       connect_title: Connect
       address:
         lines:
