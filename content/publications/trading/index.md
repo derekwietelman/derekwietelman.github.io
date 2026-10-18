@@ -9,7 +9,6 @@ authors:
 date: '2025-07-12T00:00:00Z'
 publication_types:
 - article
-publication: AAEA 2025 Annual Meeting
 abstract: 'Emissions trading programs have been promoted as efficient means to reduce nonpoint source water pollution and sequester carbon from agricultural land. While trading programs are often evaluated in isolation, they compete with longstanding agricultural conservation subsidy programs. Both programs target agroforestry practices that provide environmental benefits using different payment structures: Trading pays for performance while agricultural conservation programs pay for effort. We evaluate the performance of both programs in isolation and competition using an integrated assessment model that combines a stated preference survey of agricultural landowners for establishing forests with biophysical models of water quality and carbon sequestration benefits of forests. Our numerical policy simulation suggests that the water quality trading program in isolation can provide sufficient financial incentives for landowners to engage in afforestation activities on agricultural land. However,
   federal agricultural conservation subsidies largely crowd out the trading program when in competition. Stacking payments for carbon offsets with water quality trading payments does not enhance trading participation. Overall, the attractiveness and effectiveness of emissions trading programs for afforestation activities on agricultural land are heavily influenced by the presence and level of federal agricultural conservation subsidies.'
 hugoblox:
