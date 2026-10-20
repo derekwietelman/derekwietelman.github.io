@@ -1,5 +1,6 @@
 {{/* Override of the theme's resume-biography-3 block: the CV download button is moved from under the
-     bio (right column) to under the name and title (left column). Otherwise identical to the theme's copy. */}}
+     bio (right column) to under the name and title (left column), and the profile icon links use their `label`
+     (when set) for screen readers instead of the icon's file name. Otherwise identical to the theme's copy. */}}
 {{/* Hugo Blox: Biography 3 */}}
 {{/* Documentation: https://hugoblox.com/blocks/ */}}
 {{/* License: https://github.com/HugoBlox/kit/blob/main/LICENSE.md */}}
@@ -325,7 +326,7 @@
               {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
             {{ end }}
             <a href="{{ $linkUrl | safeURL }}" {{ $target | safeHTMLAttr }} 
-               aria-label="{{ $iconName }}"
+               aria-label="{{ $linkLabel | default $iconName }}"
                {{ if $linkLabel }} title="{{ $linkLabel }}"{{ end }}
                class="w-12 h-12 flex items-center justify-center rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 
                       shadow-md hover:shadow-xl hover:scale-110 hover:-translate-y-1 

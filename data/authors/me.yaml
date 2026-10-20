@@ -15,8 +15,11 @@ links:
     label: E-mail Me
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=4fMH-1cAAAAJ
+    label: Google Scholar
   - icon: brands/github
     url: https://github.com/derekwietelman
+    label: GitHub
   - icon: academicons/cv
     url: /files/cv.pdf
+    label: CV
 
