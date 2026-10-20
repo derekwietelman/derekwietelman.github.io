@@ -13,6 +13,11 @@
   }
 }
 
+/* Biography bullets: theme draws them in a faint gray; match the text color. */
+#about .prose li::marker {
+  color: inherit;
+}
+
 /* Working papers & publications: theme caps the list at 48rem (768px). */
 #working-papers .container.max-w-3xl,
 #publications .container.max-w-3xl {
