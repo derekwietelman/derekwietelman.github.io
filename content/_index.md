@@ -80,5 +80,8 @@ sections:
         - icon: brands/linkedin
           url: https://www.linkedin.com/in/derek-wietelman-2b351b146
           label: LinkedIn
+        - icon: academicons/researchgate
+          url: https://www.researchgate.net/profile/Derek-Wietelman
+          label: ResearchGate
       show_form: false
 ---
