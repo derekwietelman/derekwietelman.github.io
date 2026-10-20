@@ -1,0 +1,16 @@
+{{/* Override of the theme's WebSite structured data: adds the site name, which Google uses to choose the name it shows in search results. */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.Params.hugoblox.identity.name }},
+  {{- if site.Params.hugoblox.search.enable }}
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {{ printf "%s?q={search_term_string}" site.BaseURL }},
+    "query-input": "required name=search_term_string"
+  },
+  {{end -}}
+  "url": {{site.BaseURL}}
+}
+</script>
