@@ -12,15 +12,14 @@ sections:
       # Profile details (name, role, links) live in `data/authors/me.yaml`.
       username: me
       text: |-
-        Welcome! I am a [Postdoctoral Associate](https://ibs.colorado.edu/people/derek-wietelman/) at the [University of Colorado Boulder](https://www.colorado.edu), housed in the [Institute of Behavioral Science](https://ibs.colorado.edu). In 2026, I received my Ph.D. from the [Department of Agricultural and Resource Economics](https://arec.umd.edu) at the [University of Maryland](https://umd.edu).
+        Welcome to my personal research website. I am a [Postdoctoral Associate](https://ibs.colorado.edu/people/derek-wietelman/) at the [University of Colorado Boulder](https://www.colorado.edu), housed in the [Institute of Behavioral Science](https://ibs.colorado.edu). In 2026, I received my Ph.D. from the [Department of Agricultural and Resource Economics](https://arec.umd.edu) at the [University of Maryland](https://umd.edu).\*
 
-        I am an applied microeconomist who specializes in environmental and resource economics. I often study the economics of energy and water resources. My current work aims to:
+        I am an **applied microeconomist** who specializes in **environmental and resource economics**. Much of my current research studies the pricing and allocation of energy and water resources during times of scarcity, such as [periods of peak electricity demand](/publications/ecobee/) or [severe droughts](/publications/bbr/). Currently, I am working on a project that illustrates how drought-induced water conservation mandates distribute costs and benefits across water suppliers with heterogeneous cost structures.
 
-        - Understand the distributional and welfare implications of drought-induced water conservation mandates.
-        - Identify the impact of lead exposure and lead pipe remediation efforts by water utilities on children's health and behavioral outcomes.
-        - Estimate household preferences for voluntary cost-share programs designed to improve surface water quality outcomes.
+        In addition to my work on resource **quantities**, I also maintain an active research agenda in environmental **quality**, particularly the economics of water quality. In this work, I characterize [long-run trends in surface water quality](/publications/texas/) and examine how policies like voluntary cost-share programs affect nonpoint source pollution from both the [agricultural](/publications/trading/) and residential sectors. Currently, I am working to identify how variation in lead exposure and in water utilities' remediation efforts (e.g., lead service line removals) affects health and behavioral outcomes.
 
-        This is a personal research website. Any statements presented here are my own and do not necessarily represent the views of any of my employers, past or present.
+        \* All conclusions in the writings presented here are my own and do not necessarily represent the views of any of my employers, past or present.
+        {.bio-note}
       button:
         text: Download CV
         url: /files/cv.pdf

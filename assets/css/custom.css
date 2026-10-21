@@ -23,6 +23,31 @@
   color: inherit;
 }
 
+/* Biography disclaimer (marked `{.bio-note}` in content/_index.md): smaller,
+   faded text under a short divider, like a footnote. */
+#about .bio-note {
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.75);
+}
+#about .bio-note::before {
+  content: '';
+  display: block;
+  width: 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  margin-bottom: 0.75em;
+}
+
+/* Biography: drop the theme's extra space under the text (3rem below the
+   block, plus the last paragraph's margin) so the gap before Working Papers
+   matches the other section gaps. */
+#about .mb-12:has(.bio-text) {
+  margin-bottom: 0;
+}
+#about .bio-text > :last-child {
+  margin-bottom: 0;
+}
+
 /* Working papers & publications: theme caps the list at 48rem (768px). */
 #working-papers .container.max-w-3xl,
 #publications .container.max-w-3xl {
@@ -92,12 +117,15 @@ article main:has(> .max-w-prose.grid) > .container.prose > .max-w-prose {
 }
 
 /* Less vertical space. Section padding itself is set by `layout.spacing`
-   in params.yaml; these trim the extra space individual blocks add. */
+   in params.yaml; these trim the extra space individual blocks add.
+   Gaps between sections are exactly 100px from the end of one section's
+   content to the next section's heading: 40px section padding on each side
+   (`compact` spacing) plus 20px (1.25rem) below each section's content. */
 
 /* Biography: theme adds up to 8rem above and below. */
 #about .resume-biography {
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
 }
 
 /* Gap between a list's heading and its first entry (theme: 5rem). */
@@ -106,9 +134,16 @@ article main:has(> .max-w-prose.grid) > .container.prose > .max-w-prose {
   margin-top: 1rem;
 }
 
-/* Contact: theme adds up to 5rem above and below, plus 3rem under the title. */
+/* Space under a list's last entry (theme: 1rem, set inline, hence !important). */
+#working-papers .view-citation:last-child,
+#publications .view-citation:last-child {
+  margin-bottom: 1.25rem !important;
+}
+
+/* Contact: theme adds up to 5rem above and below, plus 3rem under the title.
+   No top padding, so the gap above it matches the other section gaps. */
 #contact .max-w-7xl.mx-auto {
-  padding-top: 1rem;
+  padding-top: 0;
   padding-bottom: 1rem;
 }
 #contact .text-center.mb-12 {
