@@ -13,6 +13,11 @@
   }
 }
 
+/* Biography text: theme uses a light blue-gray; make it white like the name. */
+#about .prose {
+  color: #fff;
+}
+
 /* Biography bullets: theme draws them in a faint gray; match the text color. */
 #about .prose li::marker {
   color: inherit;
@@ -60,6 +65,21 @@ article main:has(> .max-w-prose.grid) > .container.prose > .max-w-prose {
   }
 }
 
+/* Citation text: theme uses a pale blue; make it white to match the bio.
+   The PDF/DOI buttons keep their teal accent color. */
+#working-papers .view-citation,
+#publications .view-citation {
+  color: #fff;
+}
+
+/* PDF/DOI buttons under each citation: slightly larger than the theme's
+   0.75rem (12px). Their icons scale with the text. */
+#working-papers .hb-attachment-link-small,
+#publications .hb-attachment-link-small {
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.375rem;
+}
+
 /* Hide the profile link icons under the name/affiliation; they're in the
    Contact section's "Find me on" instead. (Still shown on publication pages.) */
 #about .flex.flex-wrap.justify-center.gap-4 {
@@ -93,6 +113,15 @@ article main:has(> .max-w-prose.grid) > .container.prose > .max-w-prose {
 }
 #contact .text-center.mb-12 {
   margin-bottom: 2rem;
+}
+
+/* Contact: theme uses a gray-blue for the address, the "Email" label and the
+   profile icons; make them white to match the rest of the page. The icons
+   still turn teal on hover. */
+#contact .space-y-4 > .text-gray-600,
+#contact .text-sm.text-gray-500,
+#contact .flex-wrap.gap-3 > a:not(:hover) {
+  color: #fff;
 }
 
 /* Tighter side padding on phones (theme default is 1.5rem). */
