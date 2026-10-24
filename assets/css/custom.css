@@ -204,6 +204,12 @@ article main:has(> .max-w-prose.grid) > .container.prose > .max-w-prose {
   margin-bottom: 1.25rem !important;
 }
 
+/* Research page: none under the last working paper, so the gap down to the
+   Publications heading is 80px (just the two sections' 40px padding). */
+#working-papers .view-citation:last-child {
+  margin-bottom: 0 !important;
+}
+
 /* Contact: theme adds up to 5rem above and below, plus 3rem under the title.
    No top padding, so the gap above it matches the other section gaps. */
 #contact .max-w-7xl.mx-auto {
