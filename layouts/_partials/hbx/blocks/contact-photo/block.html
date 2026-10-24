@@ -1,0 +1,15 @@
+{{/* Contact block with a photo: the theme's contact-info block, followed by an optional photo
+     (`image`, a path under `assets/media/`, with `image_alt` and `caption` in the block's
+     content). The photo goes through the same image hook as Bio page photos. Layout (cards
+     stacked, photo on the right on wide screens) is in assets/css/custom.css. */}}
+{{ $page := .wcPage }}
+{{ $content := .wcBlock.content }}
+{{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
+
+<div class="contact-photo">
+  {{ partial "hbx/blocks/contact-info/block.html" . }}
+  {{ with index $content "image" }}
+    {{ $md := printf "![%s](%s %q)" (index $content "image_alt" | default "") . (index $content "caption" | default "") }}
+    {{ $page.RenderString (dict "display" "block") $md }}
+  {{ end }}
+</div>

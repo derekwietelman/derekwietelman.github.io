@@ -35,25 +35,82 @@
   }
 }
 
-/* Bio page photos: rounded corners, soft shadow, small faded caption. On
-   phones and tablets each photo sits in the text where it appears, no taller
-   than 32rem so a portrait photo doesn't fill a tablet screen. */
+/* Bio and Contact page photos: rounded corners, soft shadow, small faded
+   caption. On phones and tablets each photo is no taller than 32rem, so a
+   portrait photo doesn't fill a tablet screen. */
 #bio figure {
   margin: 0 0 2rem;
 }
-#bio figure img {
+#bio figure img,
+#contact figure img {
   width: auto;
   max-height: 32rem;
   margin: 0 auto;
   border-radius: 0.75rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
-#bio figcaption {
+#bio figcaption,
+#contact figcaption {
   margin-top: 0.6rem;
   font-size: 0.8em;
   line-height: 1.4;
   text-align: center;
   color: rgba(255, 255, 255, 0.75);
+}
+/* Contact text is smaller than the bio's, so set the caption size directly. */
+#contact figcaption {
+  font-size: 0.95rem;
+}
+
+/* Contact page photo (content/contact.md): on phones and tablets it follows
+   the cards, with the same side padding. */
+#contact .contact-photo > figure {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1rem 1rem 1rem;
+}
+@media (min-width: 640px) {
+  #contact .contact-photo > figure {
+    padding: 1rem 1.5rem 1rem;
+  }
+}
+
+/* Contact page on wide screens: the two cards stacked on the left, the photo
+   on the right, in equal columns at the Bio and Research pages' 68rem width
+   (the photo then comes out about as tall as the cards). The theme's wrapper
+   is flattened (display: contents) so the "Contact" title can span both
+   columns. */
+@media (min-width: 1024px) {
+  #contact .contact-photo {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 3rem;
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 0 2rem 1rem;
+  }
+  #contact .contact-photo > .max-w-7xl {
+    display: contents;
+  }
+  #contact .contact-photo > .max-w-7xl > .text-center {
+    grid-column: 1 / -1;
+  }
+  #contact .contact-photo > .max-w-7xl > .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    align-content: start;
+  }
+  #contact .contact-photo > figure {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    padding: 0;
+  }
+  /* 90% of the column width, centered. */
+  #contact figure img {
+    width: 90%;
+    max-height: none;
+  }
 }
 
 /* Bio page on wide screens: text in a column on the left (about as wide as
@@ -227,6 +284,65 @@ article main:has(> .max-w-prose.grid) > .container.prose > .max-w-prose {
 #contact .text-sm.text-gray-500,
 #contact .flex-wrap.gap-3 > a:not(:hover) {
   color: #fff;
+}
+
+/* Contact cards: larger text, matching the 1.125rem (phones) / 1.25rem used
+   for text on the other pages, so the cards aren't mostly empty space. */
+#contact h3 {
+  font-size: 1.5rem; /* theme: 1.5rem everywhere */
+}
+#contact .space-y-4 > .text-gray-600 {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+/* Email address: theme size on phones, a little smaller on narrow ones
+   (under ~380px), so it stays on one line beside its icon. It wraps instead
+   of overflowing on the very narrowest screens. */
+#contact .space-y-3 > a p:not(.text-sm) {
+  font-size: min(1rem, 4.2vw);
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+#contact .space-y-3 > a > div:first-child {
+  flex-shrink: 0;
+}
+#contact .space-y-3 > a p.text-sm {
+  font-size: 0.95rem;
+}
+#contact h4 {
+  font-size: 1.0625rem;
+}
+@media (min-width: 640px) {
+  #contact h3 {
+    font-size: 1.75rem;
+  }
+  #contact .space-y-4 > .text-gray-600,
+  #contact .space-y-3 > a p:not(.text-sm) {
+    font-size: 1.25rem;
+  }
+  #contact .space-y-3 > a p.text-sm {
+    font-size: 1rem;
+  }
+  #contact h4 {
+    font-size: 1.125rem;
+  }
+}
+
+/* Same padding in both cards (theme gives Connect 2.5rem on wide screens and
+   Mailing Address 2rem, so their headings didn't line up); a little less on
+   phones to leave room for the email address. */
+#contact .contact-photo > .max-w-7xl > .grid > div {
+  padding: 1.5rem;
+}
+@media (min-width: 640px) {
+  #contact .contact-photo > .max-w-7xl > .grid > div {
+    padding: 2rem;
+  }
+}
+
+/* Connect card first, Mailing Address below it (theme order is the reverse). */
+#contact .contact-photo > .max-w-7xl > .grid > :first-child {
+  order: 1;
 }
 
 /* Tighter side padding on phones (theme default is 1.5rem). */

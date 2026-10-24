@@ -1,5 +1,6 @@
 ---
-# Contact page.
+# Contact page: contact cards with a photo beside them (block defined in
+# layouts/_partials/hbx/blocks/contact-photo/). Photo files go in `assets/media/contact/`.
 title: Contact
 type: landing
 # Keep it out of the theme's page list in the phone menu on paper pages.
@@ -7,7 +8,7 @@ sidebar:
   hidden: true
 
 sections:
-  - block: contact-info
+  - block: contact-photo
     id: contact
     content:
       title: Contact
@@ -37,4 +38,7 @@ sections:
           url: https://www.researchgate.net/profile/Derek-Wietelman
           label: ResearchGate
       show_form: false
+      image: contact/boulder-creek.jpg
+      image_alt: Boulder Creek flowing between rocky, tree-lined banks
+      caption: A view from a lunchtime walk along Boulder Creek Path.
 ---
