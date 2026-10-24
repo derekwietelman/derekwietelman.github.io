@@ -5,7 +5,7 @@ view: citation
 banner:
   caption: ''
   image: ''
-# Don't publish the theme's /publications/ list page; papers are listed on the homepage.
+# Don't publish the theme's /publications/ list page; papers are listed on the Research page (content/research.md).
 build:
   render: never
 # Keep it out of the theme's hidden page menu too, where it would be a link to nowhere.

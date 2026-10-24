@@ -23,6 +23,70 @@
   color: inherit;
 }
 
+/* Bio page (content/bio.md): same white text and size as the homepage
+   biography. */
+#bio .prose {
+  font-size: 1.125rem;
+  color: #fff;
+}
+@media (min-width: 640px) {
+  #bio .prose {
+    font-size: 1.25rem;
+  }
+}
+
+/* Bio page photos: rounded corners, soft shadow, small faded caption. On
+   phones and tablets each photo sits in the text where it appears, no taller
+   than 32rem so a portrait photo doesn't fill a tablet screen. */
+#bio figure {
+  margin: 0 0 2rem;
+}
+#bio figure img {
+  width: auto;
+  max-height: 32rem;
+  margin: 0 auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+#bio figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.8em;
+  line-height: 1.4;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Bio page on wide screens: text in a column on the left (about as wide as
+   the homepage bio), photos in a column on the right, each level with the
+   paragraph below it in the file. */
+@media (min-width: 1024px) {
+  #bio .flex-col.max-w-prose,
+  #bio .prose {
+    width: 100%;
+    max-width: 68rem;
+  }
+  #bio .prose > :not(figure) {
+    max-width: 58%;
+  }
+  /* Top margin matches the paragraphs' (1.2em), so the photo's top lines
+     up with the first line of text beside it. */
+  #bio figure {
+    float: right;
+    clear: right;
+    width: 36%;
+    margin: 1.2em 0 1.5rem;
+  }
+  /* Landscape photos fill the column; portrait ones are capped a little
+     shorter, so they don't tower over the text. */
+  #bio figure img {
+    max-height: 26rem;
+  }
+  /* Photos stacked past the end of the text still push the footer down. */
+  #bio .prose {
+    display: flow-root;
+  }
+}
+
 /* Biography disclaimer (marked `{.bio-note}` in content/_index.md): smaller,
    faded text under a short divider, like a footnote. */
 #about .bio-note {

@@ -57,6 +57,11 @@ taxonomies:
   publication_type: publication_types
 markup:
   _merge: deep
+  # An image on its own line becomes a captioned figure (theme's image hook).
+  # Don't also wrap it in a paragraph, which isn't valid HTML around a figure.
+  goldmark:
+    parser:
+      wrapStandAloneImageWithinParagraph: false
   highlight:
     lineNos: false
 security:
