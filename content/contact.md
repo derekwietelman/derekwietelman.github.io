@@ -40,5 +40,5 @@ sections:
       show_form: false
       image: contact/boulder-creek.jpg
       image_alt: Boulder Creek flowing between rocky, tree-lined banks
-      caption: A view from a lunchtime walk along Boulder Creek Path.
+      caption: A view from a lunchtime walk along Boulder Creek.
 ---

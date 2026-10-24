@@ -115,7 +115,10 @@
 
 /* Bio page on wide screens: text in a column on the left (about as wide as
    the homepage bio), photos in a column on the right, each level with the
-   paragraph below it in the file. */
+   paragraph above it in the file (phones show it below that paragraph).
+   The text floats left so a photo that follows a paragraph can float up
+   beside it; floated margins don't collapse, so only the top one (1.2em)
+   is kept. */
 @media (min-width: 1024px) {
   #bio .flex-col.max-w-prose,
   #bio .prose {
@@ -123,7 +126,10 @@
     max-width: 68rem;
   }
   #bio .prose > :not(figure) {
-    max-width: 58%;
+    float: left;
+    clear: left;
+    width: 58%;
+    margin: 1.2em 0 0;
   }
   /* Top margin matches the paragraphs' (1.2em), so the photo's top lines
      up with the first line of text beside it. */
