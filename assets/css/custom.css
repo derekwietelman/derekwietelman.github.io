@@ -273,6 +273,18 @@ article main:has(> .max-w-prose.grid) > .container.prose > .max-w-prose {
   margin-bottom: 0 !important;
 }
 
+/* Space above the copyright line at the bottom of every page. The theme puts
+   6rem (96px) above the footer, on top of the last section's 40px padding;
+   cut it to 1.5rem on wide screens and none on phones. */
+.page-footer > footer {
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  .page-footer > footer {
+    margin-top: 1.5rem;
+  }
+}
+
 /* Contact: theme adds up to 5rem above and below, plus 3rem under the title.
    No top padding, so the gap above it matches the other section gaps. */
 #contact .max-w-7xl.mx-auto {

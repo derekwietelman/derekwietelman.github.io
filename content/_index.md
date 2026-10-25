@@ -26,9 +26,6 @@ sections:
       headings:
         about: Biography
     design:
-      background:
-        gradient_mesh:
-          enable: true
       name:
         size: md
       avatar:
