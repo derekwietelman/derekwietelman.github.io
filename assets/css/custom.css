@@ -35,8 +35,8 @@
   }
 }
 
-/* Bio and Contact page photos: rounded corners, soft shadow, small faded
-   caption. On phones and tablets each photo is no taller than 32rem, so a
+/* Bio and Contact page photos: rounded corners, soft shadow, small white
+   caption (same white as the text). On phones and tablets each photo is no taller than 32rem, so a
    portrait photo doesn't fill a tablet screen. */
 #bio figure {
   margin: 0 0 2rem;
@@ -55,7 +55,7 @@
   font-size: 0.8em;
   line-height: 1.4;
   text-align: center;
-  color: rgba(255, 255, 255, 0.75);
+  color: #fff;
 }
 /* Contact text is smaller than the bio's, so set the caption size directly. */
 #contact figcaption {
