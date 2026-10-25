@@ -1,3 +1,47 @@
+/* Accent color: CU Boulder gold in place of the Marine theme's teal (and the
+   purple in its gradients). Every theme accent ("Economist", PDF/DOI buttons,
+   hover colors, icon circles) draws from these shades, so this one block
+   recolors them all. Official values from colorado.edu/imc/cu-boulder-brand:
+   CU Gold #CFB87C (400/500, used for accent text on the navy), CUB Light Gold
+   #F3F0E9 (50), Accessible CU Gold #8D7334 (700). The rest are blends: 100-300
+   CU Gold mixed with white, 600 halfway to 700, 800-950 700 darkened. Both
+   selectors are needed: the theme sets these in `:root` and `.dark`. */
+:root,
+.dark {
+  --hb-primary-50-rgb: 243 240 233;
+  --hb-primary-100-rgb: 241 234 216;
+  --hb-primary-200-rgb: 231 220 190;
+  --hb-primary-300-rgb: 219 202 157;
+  --hb-primary-400-rgb: 207 184 124;
+  --hb-primary-500-rgb: 207 184 124;
+  --hb-primary-600-rgb: 174 150 88;
+  --hb-primary-700-rgb: 141 115 52;
+  --hb-primary-800-rgb: 113 92 42;
+  --hb-primary-900-rgb: 85 69 31;
+  --hb-primary-950-rgb: 56 46 21;
+  --hb-secondary-50-rgb: 243 240 233;
+  --hb-secondary-100-rgb: 241 234 216;
+  --hb-secondary-200-rgb: 231 220 190;
+  --hb-secondary-300-rgb: 219 202 157;
+  --hb-secondary-400-rgb: 207 184 124;
+  --hb-secondary-500-rgb: 207 184 124;
+  --hb-secondary-600-rgb: 174 150 88;
+  --hb-secondary-700-rgb: 141 115 52;
+  --hb-secondary-800-rgb: 113 92 42;
+  --hb-secondary-900-rgb: 85 69 31;
+  --hb-secondary-950-rgb: 56 46 21;
+}
+
+/* Download CV button: solid CU Gold with navy text (theme: a teal-to-purple
+   gradient with white text); a lighter gold on hover. */
+#about a[href$="cv.pdf"] {
+  background: var(--color-primary-400);
+  color: var(--hb-color-background);
+}
+#about a[href$="cv.pdf"]:hover {
+  background: var(--color-primary-300);
+}
+
 /* Widen text on large screens. These are max-widths only, so phones and
    tablets (already narrower than the caps) are unaffected. */
 
@@ -218,7 +262,7 @@ article main:has(> .max-w-prose.grid) > .container.prose > .max-w-prose {
 }
 
 /* Citation text: theme uses a pale blue; make it white to match the bio.
-   The PDF/DOI buttons keep their teal accent color. */
+   The PDF/DOI buttons keep their gold accent color. */
 #working-papers .view-citation,
 #publications .view-citation {
   color: #fff;
@@ -297,7 +341,7 @@ article main:has(> .max-w-prose.grid) > .container.prose > .max-w-prose {
 
 /* Contact: theme uses a gray-blue for the address, the "Email" label and the
    profile icons; make them white to match the rest of the page. The icons
-   still turn teal on hover. */
+   still turn gold on hover. */
 #contact .space-y-4 > .text-gray-600,
 #contact .text-sm.text-gray-500,
 #contact .flex-wrap.gap-3 > a:not(:hover) {
