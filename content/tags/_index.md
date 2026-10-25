@@ -1,6 +1,6 @@
 ---
-# Don't publish the theme's list pages for this taxonomy (or its terms); the
-# homepage still uses the taxonomy internally to sort papers.
+# Don't publish the theme's list pages for this taxonomy (or its terms). No
+# paper uses tags, so there's nothing to list.
 build:
   render: never
 cascade:

@@ -6,15 +6,24 @@ The site is built with [Hugo](https://gohugo.io) and the [Hugo Blox](https://hug
 
 ## Where things live
 
+The site has four pages plus a page for each paper. The top menu is Home · Bio · CV · Research · Contact.
+
 | What you want to change | File |
 | --- | --- |
-| Name, title, affiliation, interests, education, profile links | `data/authors/me.yaml` |
-| Biography text, homepage sections and their order | `content/_index.md` |
-| A paper (title, authors, status, abstract, links) | `content/publications/<paper>/index.md` |
+| Homepage: short bio and its footnote | `content/_index.md` (under `text:`) |
+| Bio page: longer bio and its photos | `content/bio.md`; photos in `assets/media/bio/` |
+| Research page: the two paper lists (headings, which papers go where) | `content/research.md` |
+| Contact page: address, email, profile links, photo and caption | `content/contact.md`; photo in `assets/media/contact/` |
+| A paper (title, authors, date, status, abstract, links) | `content/publications/<paper>/index.md` |
+| Name and the role under it ("Economist") | `data/authors/me.yaml` |
+| Profile photo | `assets/media/authors/me.jpg` |
 | Top menu links | `config/_default/menus.yaml` |
 | PDFs (CV, papers) | `static/files/` (served at `/files/<name>.pdf`) |
-| Profile photo | `assets/media/authors/me.jpg` |
-| Site-wide settings (colors, footer, search) | `config/_default/params.yaml` |
+| Labels such as "Working Paper" and "Peer-Reviewed Publication" | `i18n/en.yaml` |
+| Colors (navy with CU Gold accents), text sizes and spacing | `assets/css/custom.css` |
+| Site name, description for search engines, footer | `config/_default/params.yaml` |
+
+Files under `layouts/` change how the theme builds pages (for example, paper pages without share buttons or an author card). Each one has a comment at the top saying what it changes.
 
 ## Making changes on github.com (no software needed)
 
@@ -26,18 +35,20 @@ The site is built with [Hugo](https://gohugo.io) and the [Hugo Blox](https://hug
 
 ### Common tasks
 
-**Update your CV.** In `static/files/`, click **Add file → Upload files**, upload the new PDF named exactly `cv.pdf` (it replaces the old one), and commit. The menu, Download CV button and CV icon all point to `/files/cv.pdf`.
+**Update your CV.** In `static/files/`, click **Add file → Upload files**, upload the new PDF named exactly `cv.pdf` (it replaces the old one), and commit. The menu's CV link and the homepage's Download CV button both point to `/files/cv.pdf`.
 
 **Change a paper's status** (e.g. a working paper gets accepted). Edit `content/publications/<paper>/index.md`:
-- Working paper status line: `publication: Revise and Resubmit, *JAERE*` (text between `*` is italic).
-- Once published, switch it to the Publications section by changing `publication_types` to `article-journal` and giving the journal details, e.g.
+- Working paper status line: `publication: R&R, *Journal of the Association of Environmental and Resource Economists*` (text between `*` is italic).
+- Once published, move it to the Peer-Reviewed Publications list by changing `publication_types` to `article-journal`, setting `date` to the issue's month, and giving the journal details, e.g.
   ```yaml
+  date: '2026-03-01T00:00:00Z'
   publication_types:
   - article-journal
   publication:
     name: Journal of the Association of Environmental and Resource Economists
-    volume: 12
-    issue: 3
+    volume: 'Vol. 13'
+    issue: 2
+    pages: '345–378'
   hugoblox:
     ids:
       doi: 10.1086/123456
@@ -47,9 +58,9 @@ The site is built with [Hugo](https://gohugo.io) and the [Hugo Blox](https://hug
 1. Upload the PDF to `static/files/`.
 2. In `content/publications/`, click **Add file → Create new file** and name it `<short-name>/index.md` (e.g. `lead/index.md`).
 3. Copy the contents of an existing paper's `index.md` (e.g. `content/publications/bbr/index.md`), then edit the title, authors (use `me` for yourself), date, status, abstract and PDF link.
-4. `publication_types: [article]` puts it under **Working Papers**; `[article-journal]` puts it under **Publications**. Papers are listed newest first by `date`.
+4. `publication_types: [article]` puts it under **Working Papers**; `[article-journal]` puts it under **Peer-Reviewed Publications**. Both lists are on the Research page, newest first by `date`.
 
-**Edit your bio or interests.** Bio paragraphs are under `text:` in `content/_index.md`; interests, education and role are in `data/authors/me.yaml`. Keep the indentation (spaces) exactly as it is—YAML is sensitive to it.
+**Edit your bio.** The homepage bio is under `text:` in `content/_index.md`; the Bio page's longer bio is under `text:` in `content/bio.md` (its opening comment explains where photos go). Keep the indentation (spaces) exactly as it is—YAML is sensitive to it.
 
 ## Previewing changes before they go live (optional)
 
@@ -64,7 +75,7 @@ pnpm install
 hugo server   # preview at http://localhost:1313
 ```
 
-Then commit and push to `main`. RStudio/blogdown is no longer needed.
+Then commit and push to `main`.
 
 ## How publishing works
 

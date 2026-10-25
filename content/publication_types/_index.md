@@ -1,6 +1,6 @@
 ---
 # Don't publish the theme's list pages for this taxonomy (or its terms); the
-# homepage still uses the taxonomy internally to sort papers.
+# Research page still uses the taxonomy internally to sort papers into its lists.
 build:
   render: never
 cascade:
