@@ -23,7 +23,7 @@ sections:
   - block: collection
     id: publications
     content:
-      title: Published Papers
+      title: Peer-Reviewed Publications
       filters:
         folders:
           - publications

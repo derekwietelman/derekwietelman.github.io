@@ -242,11 +242,32 @@ article main > .max-w-prose.grid {
   }
 }
 
-/* Paper pages: let the bottom block (share buttons, author card) span the
-   same width so the card lines up with the text above it. */
+/* Paper pages: let the bottom block (links to the previous and next paper)
+   span the same width as the text above it. */
 article main:has(> .max-w-prose.grid) > .container.prose,
 article main:has(> .max-w-prose.grid) > .container.prose > .max-w-prose {
   max-width: none;
+}
+
+/* Paper pages: trim the space around the previous/next links, which the
+   theme sized for the share buttons and author card that used to sit above
+   them (both removed in layouts/). Drops an empty spacer's 4rem margin and
+   the block's 1.25rem top margin, shrinks the divider's 3.5rem margins to
+   2rem, and removes the page's 2rem of padding under the links. The theme
+   also stretches the page to the window's height, which on a large screen
+   left a big gap between the links and the copyright line; drop that too. */
+article main:has(> .max-w-prose.grid) > .mt-16:empty {
+  margin-top: 0;
+}
+article main:has(> .max-w-prose.grid) > .container.prose {
+  margin-top: 0;
+}
+article main:has(> .max-w-prose.grid) > .container.prose hr {
+  margin: 2rem 0;
+}
+article:has(> main > .max-w-prose.grid) {
+  min-height: 0;
+  padding-bottom: 0;
 }
 
 /* Larger citation text (theme default is 1rem). */

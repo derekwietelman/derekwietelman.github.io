@@ -3,3 +3,7 @@
 # Publication type shown on working paper pages (publication_types: article). Theme: "Preprint".
 - id: pub_article
   translation: Working Paper
+
+# Publication type shown on published paper pages (publication_types: article-journal). Theme: "Journal article".
+- id: pub_article_journal
+  translation: Peer-Reviewed Publication
