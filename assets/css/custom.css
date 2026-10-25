@@ -158,55 +158,46 @@
 }
 
 /* Bio page on wide screens: text in a column on the left (about as wide as
-   the homepage bio), photos in a column on the right, each level with the
-   paragraph above it in the file (phones show it below that paragraph).
-   The text floats left so a photo that follows a paragraph can float up
-   beside it; floated margins don't collapse, so only the top one (1.2em)
-   is kept. */
+   the homepage bio), photos in a column on the right as a pair, centered
+   top to bottom against the whole text (phones show each photo below the
+   paragraph above it in the file). Written for two photos: both span the
+   full height of the right column (20 rows leaves room for more paragraphs;
+   unused rows have no height), and each is centered there, then shifted up
+   or down by half its own height, leaving a 4rem gap between them. */
 @media (min-width: 1024px) {
   #bio .flex-col.max-w-prose,
   #bio .prose {
     width: 100%;
     max-width: 68rem;
   }
+  #bio .prose {
+    display: grid;
+    grid-template-columns: 58% 1fr;
+    column-gap: 6%;
+  }
   #bio .prose > :not(figure) {
-    float: left;
-    clear: left;
-    width: 58%;
+    grid-column: 1;
     margin: 1.2em 0 0;
   }
-  /* Top margin matches the paragraphs' (1.2em), so the photo's top lines
-     up with the first line of text beside it. */
+  /* Top margin matches the paragraphs' (1.2em), so the pair is centered on
+     the text itself, not on the space above the first line. */
   #bio figure {
-    float: right;
-    clear: right;
-    width: 36%;
-    margin: 1.2em 0 1.5rem;
+    grid-column: 2;
+    grid-row: 1 / span 20;
+    align-self: center;
+    margin: 1.2em 0 0;
+  }
+  #bio figure:first-of-type {
+    transform: translateY(calc(-50% - 2rem));
+  }
+  #bio figure:last-of-type {
+    transform: translateY(calc(50% + 2rem));
   }
   /* Landscape photos fill the column; portrait ones are capped a little
      shorter, so they don't tower over the text. */
   #bio figure img {
     max-height: 26rem;
   }
-  /* Photos stacked past the end of the text still push the footer down. */
-  #bio .prose {
-    display: flow-root;
-  }
-}
-
-/* Biography disclaimer (marked `{.bio-note}` in content/_index.md): smaller,
-   faded text under a short divider, like a footnote. */
-#about .bio-note {
-  font-size: 0.8em;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.75);
-}
-#about .bio-note::before {
-  content: '';
-  display: block;
-  width: 4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-  margin-bottom: 0.75em;
 }
 
 /* Biography: drop the theme's extra space under the text (3rem below the

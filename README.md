@@ -10,7 +10,7 @@ The site has four pages plus a page for each paper. The top menu is Home · Bio 
 
 | What you want to change | File |
 | --- | --- |
-| Homepage: short bio and its footnote | `content/_index.md` (under `text:`) |
+| Homepage: short bio | `content/_index.md` (under `text:`) |
 | Bio page: longer bio and its photos | `content/bio.md`; photos in `assets/media/bio/` |
 | Research page: the two paper lists (headings, which papers go where) | `content/research.md` |
 | Contact page: address, email, profile links, photo and caption | `content/contact.md`; photo in `assets/media/contact/` |
