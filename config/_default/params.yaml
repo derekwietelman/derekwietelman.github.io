@@ -86,8 +86,8 @@ hugoblox:
     sticky: true
     # Menu alignment
     align: center # left | center | right
-    # Feature toggles
-    search: true
+    # Feature toggles (search is off: it only matched words in paper titles)
+    search: false
     theme_toggle: false
     theme_picker: false
     language_switcher: true
@@ -171,7 +171,9 @@ hugoblox:
   # Site search
   # ────────────────────────────────────────────────────────────────────────────
   search:
-    enable: true
+    # Off, along with the header's search icon above. The search index tool
+    # (Pagefind) is also removed from package.json, so none is built.
+    enable: false
     # Trending/suggested search terms
     suggestions: []
     # Quick action shortcuts in search modal
