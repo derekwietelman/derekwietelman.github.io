@@ -22,7 +22,7 @@ sections:
 
         I am an ***applied microeconomist*** who specializes in ***environmental and resource economics***. Much of my current research studies the pricing and allocation of energy and water resources during periods of scarcity, such as [peak electricity demand hours](/publications/ecobee/) or [severe droughts](/publications/bbr/). Currently, I am investigating how drought-induced conservation mandates interact with existing, inefficient water prices.
 
-        ![Two elk standing on a paved trail beside a wooden fence, with autumn aspens behind](bio/lake-estes-elk.jpg "Two (not-so-friendly) Rocky Mountain elk join me for an autumn run around Lake Estes.")
+        ![Two elk standing on a paved trail beside a wooden fence, with autumn aspens behind](bio/lake-estes-elk.jpg "Two Rocky Mountain elk join me for an autumn run around Lake Estes.")
 
         In addition to my work on resource ***quantities***, I also maintain an active research agenda in the economics of environmental ***quality***, particularly water quality. In this work, I characterize [long-run trends in surface water quality](/publications/texas/) and examine how policy design impacts nonpoint source pollution from both the [agricultural](/publications/trading/) and residential sectors. Currently, I am working to identify how variation in lead remediation efforts (e.g., service line replacements by water utilities) affects health and behavioral outcomes.
 ---
