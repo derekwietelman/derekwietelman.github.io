@@ -3,7 +3,7 @@ title: The Effect of Listing the Lesser Prairie Chicken as a Threatened Species 
 authors:
 - me
 - Richard T. Melstrom
-date: '2017-01-01T00:00:00Z'
+date: '2017-04-01T00:00:00Z'
 publication_types:
 - article-journal
 publication:
