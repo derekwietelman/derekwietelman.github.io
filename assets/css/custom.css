@@ -360,6 +360,14 @@ article:has(> main > .max-w-prose.grid) {
   margin-bottom: 2rem;
 }
 
+/* Contact title: the same size as the Bio and Research page titles (theme:
+   up to 3rem on wide screens, with tighter letter spacing). */
+#contact h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  letter-spacing: normal;
+}
+
 /* Contact: theme uses a gray-blue for the address, the "Email" label and the
    profile icons; make them white to match the rest of the page. The icons
    still turn gold on hover. */
