@@ -81,10 +81,11 @@
   }
 }
 
-/* CV page: the one-line link centered under the title, and the photo below
-   it, filling the column up to 37rem wide (about 28rem tall for a 4:3
-   landscape photo). The column is wider than the theme's text width so the photo can
-   be larger. */
+/* CV page: the CV link and the "Last updated" date (separate paragraphs,
+   half a line apart) centered under the title, and the photo below them,
+   filling the column up to 34.3rem wide (about 25.7rem tall for a 4:3
+   landscape photo). The column is wider than the theme's text width so the
+   photo can be larger. */
 #cv .flex-col.max-w-prose,
 #cv .prose {
   width: 100%;
@@ -92,9 +93,16 @@
 }
 #cv .prose > p {
   text-align: center;
+  margin-bottom: 0;
 }
+#cv .prose > p + p {
+  margin-top: 0.5lh;
+}
+/* The photo's width is capped here, on the photo and caption together, so
+   the caption wraps at the photo's edges. */
 #cv figure {
-  margin: 2rem 0 1rem;
+  max-width: 34.3rem;
+  margin: 2rem auto 1rem;
 }
 
 /* Bio, CV and Contact page photos: rounded corners, soft shadow, small white
@@ -125,63 +133,104 @@
 #contact figcaption {
   font-size: 0.95rem;
 }
-/* CV page photo: fills the column (see the CV page rules above). If this
-   width changes, change `image_sizes` in content/cv.md to match. */
+/* CV page photo: fills its figure, which is capped at 34.3rem wide (see the
+   CV page rules above). If that width changes, change `image_sizes` in
+   content/cv.md to match. */
 #cv figure img {
   width: 100%;
-  max-width: 37rem;
   max-height: none;
 }
 
-/* Contact page photo (content/contact.md): on phones and tablets it follows
-   the cards, with the same side padding. */
-#contact .contact-photo > figure {
-  max-width: 80rem;
+/* Contact page (content/contact.md; markup in
+   layouts/_partials/hbx/blocks/contact-photo/block.html): the title, one card
+   (email, profile links, mailing address), then the photo. Side padding as on
+   the other pages: 1rem on phones, 1.5rem from 640px, 2rem from 1024px. */
+#contact .contact-photo {
+  max-width: 68rem;
   margin: 0 auto;
-  padding: 1rem 1rem 1rem;
+  padding: 0 1rem 1rem;
 }
+
+/* Title: the same size as the Bio and Research page titles. */
+#contact .contact-title {
+  margin-bottom: 3rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  text-align: center;
+}
+
+/* The card: each part has an icon and heading, with a divider between parts.
+   White text at the 1.125rem (phones) / 1.25rem used on the other pages. On
+   the narrowest phones (under ~350px wide) the text and headings shrink a
+   little, so the email address and "Mailing Address" stay on one line. */
+#contact .contact-card {
+  padding: 1.5rem;
+  font-size: min(1.125rem, 5.2vw);
+  line-height: 1.6;
+  color: #fff;
+}
+#contact .contact-part + .contact-part {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgb(255 255 255 / 0.1);
+}
+#contact .contact-heading {
+  margin-bottom: 1rem;
+}
+#contact .contact-heading h3 {
+  font-size: min(1.5rem, 6.4vw);
+  line-height: 1.25;
+}
+/* Email address: wraps instead of overflowing on the narrowest phones. */
+#contact .contact-email {
+  overflow-wrap: anywhere;
+}
+/* Profile icons: white (theme: gray-blue); they still turn gold on hover. */
+#contact .contact-links > a:not(:hover) {
+  color: #fff;
+}
+
+/* Photo: below the card on phones and tablets. */
+#contact .contact-photo > figure {
+  margin: 2rem 0 0;
+}
+
 @media (min-width: 640px) {
-  #contact .contact-photo > figure {
-    padding: 1rem 1.5rem 1rem;
+  #contact .contact-photo {
+    padding: 0 1.5rem 1rem;
+  }
+  #contact .contact-card {
+    padding: 2rem;
+    font-size: 1.25rem;
+  }
+  #contact .contact-heading h3 {
+    font-size: 1.75rem;
   }
 }
 
-/* Contact page on wide screens: the two cards stacked on the left, the photo
-   on the right, in equal columns at the Bio and Research pages' 68rem width.
-   The photo is centered top to bottom against the cards, a little shorter
-   than them, like the Bio page photos against the text. The theme's wrapper
-   is flattened (display: contents) so the "Contact" title can span both
-   columns. */
+/* Contact page on wide screens: the card on the left and the photo on the
+   right, in equal columns at the Bio and Research pages' 68rem width, with
+   the title across both. The photo is as tall as the card, its top and
+   bottom edges level with the card's, with the caption below. */
 @media (min-width: 1024px) {
   #contact .contact-photo {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     column-gap: 3rem;
-    max-width: 68rem;
-    margin: 0 auto;
     padding: 0 2rem 1rem;
   }
-  #contact .contact-photo > .max-w-7xl {
-    display: contents;
-  }
-  #contact .contact-photo > .max-w-7xl > .text-center {
+  #contact .contact-title {
     grid-column: 1 / -1;
   }
-  #contact .contact-photo > .max-w-7xl > .grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2rem;
-    align-content: start;
-  }
+  #contact .contact-card,
   #contact .contact-photo > figure {
-    grid-column: 2;
-    grid-row: 2;
-    align-self: center;
+    align-self: start;
     margin: 0;
-    padding: 0;
   }
-  /* 32rem tall leaves about 2.5rem (40px) above and below it. */
+  /* The card's height (35rem, 560px). If the card's height changes, change
+     this to match. */
   #contact figure img {
-    max-height: 32rem;
+    max-height: 35rem;
   }
 }
 
@@ -229,13 +278,19 @@
 }
 
 /* Biography: drop the theme's extra space under the text (3rem below the
-   block, plus the last paragraph's margin) so the gap before Working Papers
-   matches the other section gaps. */
+   block, plus the last paragraph's margin). */
 #about .mb-12:has(.bio-text) {
   margin-bottom: 0;
 }
 #about .bio-text > :last-child {
   margin-bottom: 0;
+}
+/* With the photo beside the text, start the text level with the top of the
+   photo (theme: the first paragraph's top margin, about 1.7rem, above it). */
+@media (min-width: 768px) {
+  #about .bio-text > :first-child {
+    margin-top: 0;
+  }
 }
 
 /* Working papers & publications: theme caps the list at 48rem (768px). */
@@ -333,10 +388,12 @@ article:has(> main > .max-w-prose.grid) {
    content to the next section's heading: 40px section padding on each side
    (`compact` spacing) plus 20px (1.25rem) below each section's content. */
 
-/* Biography: theme adds up to 8rem above and below. */
+/* Biography: theme adds up to 8rem above and below; none here, leaving just
+   the section's 40px above the photo and below the text, so the homepage
+   fits a laptop browser window without scrolling. */
 #about .resume-biography {
-  padding-top: 1.5rem;
-  padding-bottom: 1.25rem;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* Gap between a list's heading and its first entry (theme: 5rem). */
@@ -367,92 +424,6 @@ article:has(> main > .max-w-prose.grid) {
   .page-footer > footer {
     margin-top: 1.5rem;
   }
-}
-
-/* Contact: theme adds up to 5rem above and below, plus 3rem under the title.
-   No top padding, so the gap above it matches the other section gaps. */
-#contact .max-w-7xl.mx-auto {
-  padding-top: 0;
-  padding-bottom: 1rem;
-}
-#contact .text-center.mb-12 {
-  margin-bottom: 2rem;
-}
-
-/* Contact title: the same size as the Bio and Research page titles (theme:
-   up to 3rem on wide screens, with tighter letter spacing). */
-#contact h2 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  letter-spacing: normal;
-}
-
-/* Contact: theme uses a gray-blue for the address, the "Email" label and the
-   profile icons; make them white to match the rest of the page. The icons
-   still turn gold on hover. */
-#contact .space-y-4 > .text-gray-600,
-#contact .text-sm.text-gray-500,
-#contact .flex-wrap.gap-3 > a:not(:hover) {
-  color: #fff;
-}
-
-/* Contact cards: larger text, matching the 1.125rem (phones) / 1.25rem used
-   for text on the other pages, so the cards aren't mostly empty space. */
-#contact h3 {
-  font-size: 1.5rem; /* theme: 1.5rem everywhere */
-}
-#contact .space-y-4 > .text-gray-600 {
-  font-size: 1.125rem;
-  line-height: 1.6;
-}
-/* Email address: theme size on phones, a little smaller on narrow ones
-   (under ~380px), so it stays on one line beside its icon. It wraps instead
-   of overflowing on the very narrowest screens. */
-#contact .space-y-3 > a p:not(.text-sm) {
-  font-size: min(1rem, 4.2vw);
-  line-height: 1.6;
-  overflow-wrap: anywhere;
-}
-#contact .space-y-3 > a > div:first-child {
-  flex-shrink: 0;
-}
-#contact .space-y-3 > a p.text-sm {
-  font-size: 0.95rem;
-}
-#contact h4 {
-  font-size: 1.0625rem;
-}
-@media (min-width: 640px) {
-  #contact h3 {
-    font-size: 1.75rem;
-  }
-  #contact .space-y-4 > .text-gray-600,
-  #contact .space-y-3 > a p:not(.text-sm) {
-    font-size: 1.25rem;
-  }
-  #contact .space-y-3 > a p.text-sm {
-    font-size: 1rem;
-  }
-  #contact h4 {
-    font-size: 1.125rem;
-  }
-}
-
-/* Same padding in both cards (theme gives Connect 2.5rem on wide screens and
-   Mailing Address 2rem, so their headings didn't line up); a little less on
-   phones to leave room for the email address. */
-#contact .contact-photo > .max-w-7xl > .grid > div {
-  padding: 1.5rem;
-}
-@media (min-width: 640px) {
-  #contact .contact-photo > .max-w-7xl > .grid > div {
-    padding: 2rem;
-  }
-}
-
-/* Connect card first, Mailing Address below it (theme order is the reverse). */
-#contact .contact-photo > .max-w-7xl > .grid > :first-child {
-  order: 1;
 }
 
 /* Tighter side padding on phones (theme default is 1.5rem). */

@@ -9,8 +9,8 @@ type: landing
 sidebar:
   hidden: true
 # Photo width for the image hook: full width less the side padding on phones,
-# 592px (37rem, set in custom.css) on larger screens.
-image_sizes: "(max-width: 639px) calc(100vw - 48px), 592px"
+# 549px (34.3rem, set in custom.css) on larger screens.
+image_sizes: "(max-width: 596px) calc(100vw - 48px), 549px"
 
 sections:
   - block: markdown
@@ -18,7 +18,9 @@ sections:
     content:
       title: CV
       text: |-
-        Download the current version of my CV [here](/files/cv.pdf). Last updated: {{< cv-updated >}}.
+        Download my current CV [here](/files/cv.pdf).
+
+        Last updated: {{< cv-updated >}}.
 
         ![The Rio Grande in early-morning light, with the Sandia Mountains beyond the trees on the far bank](cv/rio-grande.jpg "An early-morning stroll along the Rio Grande, with the Sandia Mountains in the distance.")
 ---

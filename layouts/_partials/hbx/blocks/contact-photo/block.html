@@ -1,13 +1,57 @@
-{{/* Contact block with a photo: the theme's contact-info block, followed by an optional photo
-     (`image`, a path under `assets/media/`, with `image_alt` and `caption` in the block's
-     content). The photo goes through the same image hook as Bio page photos. Layout (cards
-     stacked, photo on the right on wide screens) is in assets/css/custom.css. */}}
+{{/* Contact block with a photo: the page title, one card with the email address, profile
+     links and mailing address (each part under an icon and heading, in that order), and an
+     optional photo (`image`, a path under `assets/media/`, with `image_alt` and `caption` in
+     the block's content). The card reuses the theme's contact-info card styling; the photo
+     goes through the same image hook as Bio page photos. Layout (photo below the card on
+     phones, to its right on wide screens) is in assets/css/custom.css. */}}
 {{ $page := .wcPage }}
 {{ $content := .wcBlock.content }}
 {{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
 
+{{ define "_partials/inline/contact-heading.html" }}
+  <div class="contact-heading flex items-center">
+    <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-500/10 rounded-full flex items-center justify-center border border-primary-200 dark:border-primary-500/20">
+      {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class=\"w-6 h-6 text-primary-600 dark:text-primary-400\"") }}
+    </div>
+    <h3 class="ml-4 font-bold text-gray-900 dark:text-white">{{ .title }}</h3>
+  </div>
+{{ end }}
+
 <div class="contact-photo">
-  {{ partial "hbx/blocks/contact-info/block.html" . }}
+  {{ with index $content "title" }}
+  <h2 class="contact-title font-bold text-gray-900 dark:text-white">{{ . }}</h2>
+  {{ end }}
+
+  <div class="contact-card bg-white dark:bg-white/[0.03] backdrop-blur-xl rounded-2xl border border-gray-200 dark:border-white/[0.08]">
+    {{ with index $content "email" }}
+    <div class="contact-part">
+      {{ partial "inline/contact-heading.html" (dict "icon" "hero/envelope" "title" (index $content "email_title" | default "Email")) }}
+      <a class="contact-email text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors" href="{{ printf "mailto:%s" . | safeURL }}">{{ . }}</a>
+    </div>
+    {{ end }}
+
+    {{ with index $content "social" }}
+    <div class="contact-part">
+      {{ partial "inline/contact-heading.html" (dict "icon" "hero/globe-alt" "title" (index $content "social_title" | default "Find Me On")) }}
+      <div class="contact-links flex flex-wrap gap-3">
+        {{ range . }}
+        <a href="{{ .url | safeURL }}" target="_blank" rel="noopener" title="{{ .label }}" aria-label="{{ .label }}"
+           class="w-11 h-11 flex items-center justify-center rounded-full bg-gray-100 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:bg-primary-100 dark:hover:bg-primary-500/20 hover:border-primary-300 dark:hover:border-primary-500/40 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300">
+          {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class=\"w-5 h-5\"") }}
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+    {{ with index $content "address" }}
+    <div class="contact-part">
+      {{ partial "inline/contact-heading.html" (dict "icon" "hero/map-pin" "title" (index $content "address_title" | default "Mailing Address")) }}
+      <p class="contact-address">{{ delimit . "<br>" | safeHTML }}</p>
+    </div>
+    {{ end }}
+  </div>
+
   {{ with index $content "image" }}
     {{ $md := printf "![%s](%s %q)" (index $content "image_alt" | default "") . (index $content "caption" | default "") }}
     {{ $page.RenderString (dict "display" "block") $md }}

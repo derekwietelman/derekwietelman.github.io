@@ -1,6 +1,7 @@
 ---
-# Contact page: contact cards with a photo beside them (block defined in
-# layouts/_partials/hbx/blocks/contact-photo/). Photo files go in `assets/media/contact/`.
+# Contact page: one card (email, profile links, mailing address, each under its own
+# heading) with a photo beside it (block defined in layouts/_partials/hbx/blocks/contact-photo/).
+# Photo files go in `assets/media/contact/`.
 title: Contact
 type: landing
 # Keep it out of the theme's page list in the phone menu on paper pages.
@@ -12,15 +13,9 @@ sections:
     id: contact
     content:
       title: Contact
-      visit_title: Mailing Address
-      connect_title: Connect
-      address:
-        lines:
-          - Institute of Behavioral Science
-          - University of Colorado Boulder
-          - 483 UCB
-          - Boulder, CO 80309-0483
+      email_title: Email
       email: derek.wietelman@colorado.edu
+      social_title: Find Me On
       social:
         - icon: hero/building-library
           url: https://ibs.colorado.edu/people/derek-wietelman/
@@ -37,7 +32,12 @@ sections:
         - icon: academicons/researchgate
           url: https://www.researchgate.net/profile/Derek-Wietelman
           label: ResearchGate
-      show_form: false
+      address_title: Mailing Address
+      address:
+        - Institute of Behavioral Science
+        - University of Colorado Boulder
+        - 483 UCB
+        - Boulder, CO 80309-0483
       image: contact/boulder-creek.jpg
       image_alt: Boulder Creek flowing between rocky, tree-lined banks
       caption: Taking a lunchtime walk along Boulder Creek.
