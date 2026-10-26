@@ -13,6 +13,6 @@ main:
   - name: Research
     url: /research/
     weight: 40
-  - name: Contact
+  - name: Contact Me
     url: /contact/
     weight: 50

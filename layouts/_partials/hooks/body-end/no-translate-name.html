@@ -1,0 +1,12 @@
+{{/* Mark the site name in the header as a name not to be translated (translate="no").
+     Safari decides a page's language from its text, not the page's `lang`, and reads
+     "Wietelman" as Dutch; on pages with little other text (Contact) that made it offer to
+     translate the site into English. The theme prints the header name with no way to add
+     the attribute, so it's added here. The homepage name (resume-biography-3 block) and
+     the footer copyright (`copyright.notice` in params.yaml) are marked in their own
+     markup. */}}
+<script>
+  document.querySelectorAll(".navbar-brand").forEach(function (el) {
+    el.setAttribute("translate", "no");
+  });
+</script>

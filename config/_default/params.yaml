@@ -113,8 +113,10 @@ hugoblox:
   # Legal notices and licensing
   # ────────────────────────────────────────────────────────────────────────────
   copyright:
-    # Copyright notice - supports {year}, {name}, {license} placeholders
-    notice: "© {year} {name}"
+    # Copyright notice - supports {year}, {name}, {license} placeholders.
+    # The name is marked translate="no" (see
+    # layouts/_partials/hooks/body-end/no-translate-name.html).
+    notice: '© {year} <span translate="no">{name}</span>'
     license:
       type: "" # cc | custom | "" (none)
       allow_derivatives: false

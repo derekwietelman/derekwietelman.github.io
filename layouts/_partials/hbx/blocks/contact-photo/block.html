@@ -1,4 +1,5 @@
-{{/* Contact block with a photo: the page title, one card with the email address, profile
+{{/* Contact block with a photo: the page title, an optional one-line `intro` under it, one
+     card with the email address, profile
      links and mailing address (each part under an icon and heading, in that order), and an
      optional photo (`image`, a path under `assets/media/`, with `image_alt` and `caption` in
      the block's content). The card reuses the theme's contact-info card styling; the photo
@@ -20,6 +21,9 @@
 <div class="contact-photo">
   {{ with index $content "title" }}
   <h2 class="contact-title font-bold text-gray-900 dark:text-white">{{ . }}</h2>
+  {{ end }}
+  {{ with index $content "intro" }}
+  <p class="contact-intro">{{ $page.RenderString . }}</p>
   {{ end }}
 
   <div class="contact-card bg-white dark:bg-white/[0.03] backdrop-blur-xl rounded-2xl border border-gray-200 dark:border-white/[0.08]">

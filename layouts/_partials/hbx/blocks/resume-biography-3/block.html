@@ -1,6 +1,7 @@
 {{/* Override of the theme's resume-biography-3 block: the CV download button is moved from under the
      bio (right column) to under the name and title (left column), and the profile icon links use their `label`
-     (when set) for screen readers instead of the icon's file name. Otherwise identical to the theme's copy. */}}
+     (when set) for screen readers instead of the icon's file name, and the name is marked translate="no" (see
+     layouts/_partials/hooks/body-end/no-translate-name.html). Otherwise identical to the theme's copy. */}}
 {{/* Hugo Blox: Biography 3 */}}
 {{/* Documentation: https://hugoblox.com/blocks/ */}}
 {{/* License: https://github.com/HugoBlox/kit/blob/main/LICENSE.md */}}
@@ -207,11 +208,11 @@
 
           {{/* Name with optional ruby pronunciation */}}
           {{ if and $profile.title $name_pronunciation }}
-            <h1 class="{{ $name_class }} font-black text-gray-900 dark:text-white leading-tight">
+            <h1 class="{{ $name_class }} font-black text-gray-900 dark:text-white leading-tight" translate="no">
               <ruby class="hb-ruby-name">{{ $profile.title }}<rt>{{ $name_pronunciation }}</rt></ruby>
             </h1>
           {{ else }}
-            <h1 class="{{ $name_class }} font-black text-gray-900 dark:text-white leading-tight">
+            <h1 class="{{ $name_class }} font-black text-gray-900 dark:text-white leading-tight" translate="no">
               {{ $profile.title }}
             </h1>
           {{ end }}
