@@ -35,7 +35,7 @@ Files under `layouts/` change how the theme builds pages (for example, paper pag
 
 ### Common tasks
 
-**Update your CV.** In `static/files/`, click **Add file → Upload files**, upload the new PDF named exactly `cv.pdf` (it replaces the old one), and commit. The menu's CV link and the homepage's Download CV button both point to `/files/cv.pdf`.
+**Update your CV.** In `static/files/`, click **Add file → Upload files**, upload the new PDF named exactly `cv.pdf` (it replaces the old one), and commit. The CV page's "here" link (`content/cv.md`) and the homepage's Download CV button both point to `/files/cv.pdf`, and the CV page's "Last updated" month changes on its own to the month of that commit.
 
 **Change a paper's status** (e.g. a working paper gets accepted). Edit `content/publications/<paper>/index.md`:
 - Working paper status line: `publication: R&R, *Journal of the Association of Environmental and Resource Economists*` (text between `*` is italic).

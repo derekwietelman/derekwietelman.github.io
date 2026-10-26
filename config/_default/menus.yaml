@@ -1,5 +1,5 @@
 # Navigation links in the top menu. Lower weight = further left.
-# Each link opens its own page (the CV link opens the PDF).
+# Each link opens its own page.
 main:
   - name: Home
     url: /
@@ -8,7 +8,7 @@ main:
     url: /bio/
     weight: 20
   - name: CV
-    url: /files/cv.pdf
+    url: /cv/
     weight: 30
   - name: Research
     url: /research/

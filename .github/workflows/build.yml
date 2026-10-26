@@ -132,6 +132,8 @@ jobs:
         HUGO_BLOX_LICENSE: ${{ secrets.HUGO_BLOX_LICENSE }}
       run: |
         echo "Hugo Cache Dir: $(hugo config | grep cachedir)"
+        # Date of the last commit that changed the CV, for the CV page's "Last updated"
+        export HUGO_PARAMS_CVUPDATED="$(git log -1 --format=%cI -- static/files/cv.pdf)"
         hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
     - name: Generate Pagefind search index (if applicable)

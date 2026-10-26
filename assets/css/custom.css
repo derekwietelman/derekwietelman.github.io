@@ -67,25 +67,44 @@
   color: inherit;
 }
 
-/* Bio page (content/bio.md): same white text and size as the homepage
-   biography. */
-#bio .prose {
+/* Bio and CV pages (content/bio.md, content/cv.md): same white text and size
+   as the homepage biography. */
+#bio .prose,
+#cv .prose {
   font-size: 1.125rem;
   color: #fff;
 }
 @media (min-width: 640px) {
-  #bio .prose {
+  #bio .prose,
+  #cv .prose {
     font-size: 1.25rem;
   }
 }
 
-/* Bio and Contact page photos: rounded corners, soft shadow, small white
+/* CV page: the one-line link centered under the title, and the photo below
+   it, filling the column up to 39rem wide (about 29rem tall for a 4:3
+   landscape photo). The column is wider than the theme's text width so the photo can
+   be larger. */
+#cv .flex-col.max-w-prose,
+#cv .prose {
+  width: 100%;
+  max-width: 48rem;
+}
+#cv .prose > p {
+  text-align: center;
+}
+#cv figure {
+  margin: 2rem 0 1rem;
+}
+
+/* Bio, CV and Contact page photos: rounded corners, soft shadow, small white
    caption (same white as the text). On phones and tablets each photo is no taller than 32rem, so a
    portrait photo doesn't fill a tablet screen. */
 #bio figure {
   margin: 0 0 2rem;
 }
 #bio figure img,
+#cv figure img,
 #contact figure img {
   width: auto;
   max-height: 32rem;
@@ -94,6 +113,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 #bio figcaption,
+#cv figcaption,
 #contact figcaption {
   margin-top: 0.6rem;
   font-size: 0.8em;
@@ -104,6 +124,13 @@
 /* Contact text is smaller than the bio's, so set the caption size directly. */
 #contact figcaption {
   font-size: 0.95rem;
+}
+/* CV page photo: fills the column (see the CV page rules above). If this
+   width changes, change `image_sizes` in content/cv.md to match. */
+#cv figure img {
+  width: 100%;
+  max-width: 39rem;
+  max-height: none;
 }
 
 /* Contact page photo (content/contact.md): on phones and tablets it follows

@@ -1,0 +1,7 @@
+{{/* Month and year the CV (static/files/cv.pdf) was last updated, e.g. "October 2026", for
+     the CV page. On GitHub the build workflow (.github/workflows/build.yml) passes the date of
+     the last commit that changed the file as `cvupdated`. The local preview has no such date,
+     so it uses the file's modified time. */}}
+{{- $date := (os.Stat "static/files/cv.pdf").ModTime -}}
+{{- with site.Params.cvupdated }}{{ $date = time.AsTime . }}{{ end -}}
+{{- $date | time.Format "January 2006" -}}

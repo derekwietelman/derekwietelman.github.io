@@ -4,7 +4,8 @@
      version is up to 2000px instead of 760px, so phones and tablets get sharp photos, and
      `sizes` matches this site's layout (full width less the side padding on phones, the
      ~600px text column on tablets, about 440px wide on desktop) so each screen downloads
-     only the version it needs. */}}
+     only the version it needs. A page whose photo is laid out differently (the CV page)
+     sets its own `image_sizes` in its front matter. */}}
 
 {{ $destination := .Destination }}
 {{ $is_remote := strings.HasPrefix $destination "http" }}
@@ -65,7 +66,7 @@
           {{- $height := $height | default $img_md.Height -}}
           <img alt="{{ $alt }}"
                srcset="{{ delimit $srcset ", " }}"
-               sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 600px, 440px"
+               sizes="{{ .Page.Params.image_sizes | default "(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 600px, 440px" }}"
                src="{{ $fallback.RelPermalink }}"
                width="{{ $width }}"
                height="{{ $height }}"
