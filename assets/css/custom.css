@@ -147,8 +147,9 @@
 }
 
 /* Contact page on wide screens: the two cards stacked on the left, the photo
-   on the right, in equal columns at the Bio and Research pages' 68rem width
-   (the photo then comes out about as tall as the cards). The theme's wrapper
+   on the right, in equal columns at the Bio and Research pages' 68rem width.
+   The photo is centered top to bottom against the cards, a little shorter
+   than them, like the Bio page photos against the text. The theme's wrapper
    is flattened (display: contents) so the "Contact" title can span both
    columns. */
 @media (min-width: 1024px) {
@@ -174,13 +175,13 @@
   #contact .contact-photo > figure {
     grid-column: 2;
     grid-row: 2;
+    align-self: center;
     margin: 0;
     padding: 0;
   }
-  /* 90% of the column width, centered. */
+  /* 32rem tall leaves about 2.5rem (40px) above and below it. */
   #contact figure img {
-    width: 90%;
-    max-height: none;
+    max-height: 32rem;
   }
 }
 
