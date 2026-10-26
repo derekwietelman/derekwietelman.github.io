@@ -82,7 +82,7 @@
 }
 
 /* CV page: the one-line link centered under the title, and the photo below
-   it, filling the column up to 39rem wide (about 29rem tall for a 4:3
+   it, filling the column up to 37rem wide (about 28rem tall for a 4:3
    landscape photo). The column is wider than the theme's text width so the photo can
    be larger. */
 #cv .flex-col.max-w-prose,
@@ -129,7 +129,7 @@
    width changes, change `image_sizes` in content/cv.md to match. */
 #cv figure img {
   width: 100%;
-  max-width: 39rem;
+  max-width: 37rem;
   max-height: none;
 }
 

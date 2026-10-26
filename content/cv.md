@@ -9,8 +9,8 @@ type: landing
 sidebar:
   hidden: true
 # Photo width for the image hook: full width less the side padding on phones,
-# 624px (39rem, set in custom.css) on larger screens.
-image_sizes: "(max-width: 671px) calc(100vw - 48px), 624px"
+# 592px (37rem, set in custom.css) on larger screens.
+image_sizes: "(max-width: 639px) calc(100vw - 48px), 592px"
 
 sections:
   - block: markdown
