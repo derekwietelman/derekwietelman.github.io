@@ -3,6 +3,8 @@
 # heading) with a photo beside it (block defined in layouts/_partials/hbx/blocks/contact-photo/).
 # Photo files go in `assets/media/contact/`.
 title: Contact
+# Description shown in search results and link previews.
+summary: "Email and mailing address for Derek C. Wietelman at CU Boulder's Institute of Behavioral Science, plus Google Scholar, GitHub, LinkedIn, and ResearchGate."
 type: landing
 # Keep it out of the theme's page list in the phone menu on paper pages.
 sidebar:

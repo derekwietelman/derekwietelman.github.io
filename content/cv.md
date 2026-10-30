@@ -4,6 +4,8 @@
 # `assets/media/cv/`. The "Last updated" month fills itself in from the date
 # the CV file was last committed (layouts/_shortcodes/cv-updated.html).
 title: CV
+# Description shown in search results and link previews.
+summary: "Download the current CV of Derek C. Wietelman, an applied microeconomist and postdoctoral associate at the University of Colorado Boulder."
 type: landing
 # Keep it out of the theme's page list in the phone menu on paper pages.
 sidebar:
