@@ -1,7 +1,8 @@
-{{/* Override of the theme's get_summary: same fallback order (summary > description > abstract > .Summary),
-     but a front matter value is rendered from Markdown to plain text, so *italics* in an abstract don't show
-     up as literal asterisks in page descriptions, link previews, and list cards. */}}
-{{ $summary := .Params.summary | default .Params.description | default .Params.abstract }}
+{{/* Override of the theme's get_summary: same fallback order (summary > description > .Summary), but without
+     the abstract, so paper pages use the site-wide description (params.yaml) in page descriptions and link
+     previews like every other page. A front matter value is rendered from Markdown to plain text, so *italics*
+     don't show up as literal asterisks. */}}
+{{ $summary := .Params.summary | default .Params.description }}
 {{ with $summary }}
   {{ $summary = . | markdownify | plainify | htmlUnescape }}
 {{ else }}

@@ -21,7 +21,7 @@ hugoblox:
     # Short tagline displayed on your site
     tagline: ""
     # Site meta description for search engines and social sharing
-    description: "Derek Wietelman is an applied microeconomist specializing in environmental and resource economics."
+    description: "Derek C. Wietelman is an applied microeconomist specializing in environmental and resource economics."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
       twitter: "" # Twitter/X handle for Twitter Cards (without @)
