@@ -17,4 +17,8 @@ hugoblox:
 links:
 - type: pdf
   url: /files/Kim_etal_2025.pdf
+# Old addresses of this page, which now redirect here.
+aliases:
+- /publications/trading/
+- /publication/trading/
 ---

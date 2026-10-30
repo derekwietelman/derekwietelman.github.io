@@ -20,4 +20,8 @@ hugoblox:
 links:
 - type: pdf
   url: /files/Kuwayama_etal_2020.pdf
+# Old addresses of this page, which now redirect here.
+aliases:
+- /publications/texas/
+- /publication/texas/
 ---

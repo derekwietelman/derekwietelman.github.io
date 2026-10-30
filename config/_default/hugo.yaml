@@ -21,6 +21,12 @@ removePathAccents: true
 ## PAGE OPTIONS
 ############################
 
+# Papers live in content/publications/ but are published under /research/,
+# e.g. content/publications/bbr/ -> /research/bbr/.
+permalinks:
+  page:
+    publications: /research/:contentbasename/
+
 cascade:
   - target:
       path: /slides/**
@@ -41,7 +47,8 @@ enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
 ignoreFiles: [".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
-disableAliases: true
+# Hugo writes a small redirect page at each address listed under a page's `aliases:`.
+disableAliases: false
 outputs:
   home: [HTML]
   section: [HTML]
@@ -70,5 +77,5 @@ sitemap:
   _merge: deep
 
 ignoreLogs:
-  - pub-legacy-/publications/bbr/
-  - pub-legacy-/publications/trading/
+  - pub-legacy-/research/bbr/
+  - pub-legacy-/research/trading/

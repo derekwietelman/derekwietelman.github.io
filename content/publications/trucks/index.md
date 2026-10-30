@@ -18,4 +18,8 @@ hugoblox:
 links:
 - type: pdf
   url: /files/Fraas_etal_2019.pdf
+# Old addresses of this page, which now redirect here.
+aliases:
+- /publications/trucks/
+- /publication/trucks/
 ---

@@ -12,4 +12,8 @@ abstract: 'Using price incentives to allocate scarce resources is a core tenet o
 links:
 - type: pdf
   url: /files/jmp_dcw.pdf
+# Old addresses of this page, which now redirect here.
+aliases:
+- /publications/bbr/
+- /publication/bbr/
 ---

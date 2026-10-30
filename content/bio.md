@@ -16,7 +16,7 @@ sections:
     content:
       title: Bio
       text: |-
-        My research career began late in my undergraduate studies as a statistics major at [Oklahoma State University](https://okstate.edu), when I realized that I cared more about analyzing the causal effects of public policy than about becoming a polling expert à la Nate Silver. I was first interested in studying how landowners and firms in energy-intensive industries respond to environmental regulation. This theme is reflected in my early work, including publications on [property value effects of Endangered Species Act listings](/publications/chicken/), [voluntary third-party certifications for oil and gas projects](/publications/fracking/), and [energy efficiency rules for heavy-duty trucking firms](/publications/trucks/).
+        My research career began late in my undergraduate studies as a statistics major at [Oklahoma State University](https://okstate.edu), when I realized that I cared more about analyzing the causal effects of public policy than about becoming a polling expert à la Nate Silver. I was first interested in studying how landowners and firms in energy-intensive industries respond to environmental regulation. This theme is reflected in my early work, including publications on [property value effects of Endangered Species Act listings](/research/chicken/), [voluntary third-party certifications for oil and gas projects](/research/fracking/), and [energy efficiency rules for heavy-duty trucking firms](/research/trucks/).
 
         ![Rapids and rocky banks of the Potomac River at Great Falls](bio/great-falls.jpg "A view of the Potomac River at Great Falls, one of my favorite places to hike in the DMV.")
 

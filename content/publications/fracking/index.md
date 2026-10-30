@@ -21,4 +21,8 @@ hugoblox:
 links:
 - type: pdf
   url: /files/Lee_etal_2019.pdf
+# Old addresses of this page, which now redirect here.
+aliases:
+- /publications/fracking/
+- /publication/fracking/
 ---

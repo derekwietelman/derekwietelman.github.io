@@ -26,4 +26,8 @@ links:
   url: /files/Blonz_etal_2025_appendix.pdf
 - type: code
   url: https://www.openicpsr.org/openicpsr/project/197966/version/V1/view
+# Old addresses of this page, which now redirect here.
+aliases:
+- /publications/ecobee/
+- /publication/ecobee/
 ---
