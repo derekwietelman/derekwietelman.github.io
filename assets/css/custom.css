@@ -67,16 +67,19 @@
   color: inherit;
 }
 
-/* Bio and CV pages (content/bio.md, content/cv.md): same white text and size
-   as the homepage biography. */
+/* Bio, CV and Office Hours pages (content/bio.md, content/cv.md,
+   content/office-hours.md): same white text and size as the homepage
+   biography. */
 #bio .prose,
-#cv .prose {
+#cv .prose,
+#office-hours .prose {
   font-size: 1.125rem;
   color: #fff;
 }
 @media (min-width: 640px) {
   #bio .prose,
-  #cv .prose {
+  #cv .prose,
+  #office-hours .prose {
     font-size: 1.25rem;
   }
 }
@@ -105,7 +108,30 @@
   margin: 2rem auto 1rem;
 }
 
-/* Bio, CV and Contact page photos: rounded corners, soft shadow, small white
+/* Office Hours page: laid out like the CV page. Two lines of text (separate
+   paragraphs, half a line apart; balanced if one wraps on a phone) centered
+   under the title, and the photo below them at the CV photo's size (up to
+   34.3rem wide), with the caption wrapping at the photo's edges. If that
+   width changes, change `image_sizes` in content/office-hours.md to match. */
+#office-hours .flex-col.max-w-prose,
+#office-hours .prose {
+  width: 100%;
+  max-width: 48rem;
+}
+#office-hours .prose > p {
+  text-align: center;
+  text-wrap: balance;
+  margin-bottom: 0;
+}
+#office-hours .prose > p + p {
+  margin-top: 0.5lh;
+}
+#office-hours figure {
+  max-width: 34.3rem;
+  margin: 2rem auto 1rem;
+}
+
+/* Bio, CV, Office Hours and Contact page photos: rounded corners, soft shadow, small white
    caption (same white as the text). On phones and tablets each photo is no taller than 32rem, so a
    portrait photo doesn't fill a tablet screen. */
 #bio figure {
@@ -113,6 +139,7 @@
 }
 #bio figure img,
 #cv figure img,
+#office-hours figure img,
 #contact figure img {
   width: auto;
   max-height: 32rem;
@@ -122,6 +149,7 @@
 }
 #bio figcaption,
 #cv figcaption,
+#office-hours figcaption,
 #contact figcaption {
   margin-top: 0.6rem;
   font-size: 0.8em;
@@ -133,10 +161,11 @@
 #contact figcaption {
   font-size: 0.95rem;
 }
-/* CV page photo: fills its figure, which is capped at 34.3rem wide (see the
-   CV page rules above). If that width changes, change `image_sizes` in
-   content/cv.md to match. */
-#cv figure img {
+/* CV and Office Hours page photos: each fills its figure, which is capped at
+   34.3rem wide (see the page rules above). If that width changes, change
+   `image_sizes` in content/cv.md and content/office-hours.md to match. */
+#cv figure img,
+#office-hours figure img {
   width: 100%;
   max-height: none;
 }

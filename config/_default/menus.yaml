@@ -13,6 +13,9 @@ main:
   - name: Research
     url: /research/
     weight: 40
+  - name: Office Hours
+    url: /office-hours/
+    weight: 45
   - name: Contact Me
     url: /contact/
     weight: 50
