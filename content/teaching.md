@@ -5,6 +5,9 @@
 # files go in `assets/media/teaching/`.
 title: Teaching
 type: landing
+# Old address of this page (it was Office Hours until 2026-10-30), which now redirects here.
+aliases:
+- /office-hours/
 # Keep it out of the theme's page list in the phone menu on paper pages.
 sidebar:
   hidden: true
