@@ -18,7 +18,7 @@ sections:
     content:
       title: Office Hours
       text: |-
-        I hold regular office hours for undergraduate and graduate students.
+        I hold virtual office hours for undergraduate and graduate students.
 
         Book a time to meet with me [here](https://calendar.app.google/sHV3EaRbgqg7X6nn9).
 
