@@ -2,7 +2,7 @@
 # Contact page: one card (email, profile links, mailing address, each under its own
 # heading) with a photo beside it (block defined in layouts/_partials/hbx/blocks/contact-photo/).
 # Photo files go in `assets/media/contact/`.
-title: Contact Me
+title: Contact
 type: landing
 # Keep it out of the theme's page list in the phone menu on paper pages.
 sidebar:
@@ -12,7 +12,7 @@ sections:
   - block: contact-photo
     id: contact
     content:
-      title: Contact Me
+      title: Contact
       # Shown under the title. Also keeps Safari from offering to translate this
       # page: it judges the language from the first text on the page, and this
       # page otherwise starts with only the name (which reads as Dutch) and
