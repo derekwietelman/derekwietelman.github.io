@@ -1,8 +1,7 @@
 ---
 # Homepage. Each item under `sections` is one block on the page, shown in order.
 title: ''
-# Description shown in search results and link previews.
-summary: "Derek C. Wietelman is an applied microeconomist at CU Boulder specializing in environmental and resource economics, especially energy and water."
+summary: ''
 date: 2026-10-20
 type: landing
 

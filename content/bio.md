@@ -5,8 +5,6 @@
 # the paragraph it goes with (phones show it there; wide screens put it beside
 # that paragraph). Image files go in `assets/media/bio/`.
 title: Bio
-# Description shown in search results and link previews.
-summary: "Derek C. Wietelman's path into environmental economics, from Oklahoma State and Resources for the Future to a Ph.D. at Maryland and a postdoc at CU Boulder."
 type: landing
 # Keep it out of the theme's page list in the phone menu on paper pages.
 sidebar:

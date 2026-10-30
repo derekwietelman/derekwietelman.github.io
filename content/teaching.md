@@ -4,8 +4,6 @@
 # `![description](teaching/file.jpg "Caption")` on its own line. Image
 # files go in `assets/media/teaching/`.
 title: Teaching
-# Description shown in search results and link previews.
-summary: "Derek C. Wietelman holds virtual office hours for undergraduate and graduate students. Book a time online or get in touch directly."
 type: landing
 # Old address of this page (it was Office Hours until 2026-10-30), which now redirects here.
 aliases:
