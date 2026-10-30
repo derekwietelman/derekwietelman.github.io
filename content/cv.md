@@ -22,5 +22,5 @@ sections:
 
         Last updated: {{< cv-updated >}}.
 
-        ![The Rio Grande in early-morning light, with the Sandia Mountains beyond the trees on the far bank](cv/rio-grande.jpg "An early-morning stroll along the Rio Grande, with the Sandia Mountains in the distance.")
+        ![The Rio Grande in early-morning light, with the Sandia Mountains beyond the trees on the far bank](cv/rio-grande.jpg "An early-morning stroll along the Rio Grande, with the Sandia Mountains visible in the distance.")
 ---
