@@ -21,11 +21,11 @@ sections:
     content:
       title: Teaching
       text: |-
-        Undergraduate and graduate students can book virtual office hours [here](https://calendar.app.google/sHV3EaRbgqg7X6nn9).
+        Undergraduate and graduate students can [book virtual office hours here](https://calendar.app.google/sHV3EaRbgqg7X6nn9).
 
         I am not currently teaching during the Fall 2026 semester.
 
-        My [CV](/cv/) lists a full history of my teaching experience.
+        My [current CV](/cv/) lists a full history of my teaching experience.
 
         ![The San Diego River at sunset, with a small tree-covered island between leafy banks under an orange sky](teaching/san-diego-river.jpg "Sunset over the San Diego River in Mission Valley.")
 ---

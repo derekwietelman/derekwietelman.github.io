@@ -18,7 +18,7 @@ sections:
     content:
       title: CV
       text: |-
-        Download my current CV [here](/files/cv.pdf).
+        Download a copy of my [current CV here](/files/cv.pdf).
 
         Last updated: {{< cv-updated >}}.
 
