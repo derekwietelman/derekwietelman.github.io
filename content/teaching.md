@@ -21,9 +21,7 @@ sections:
     content:
       title: Teaching
       text: |-
-        I hold virtual office hours for undergraduate and graduate students.
-
-        Book a time on my calendar [here](https://calendar.app.google/sHV3EaRbgqg7X6nn9), or [reach out directly](/contact/).
+        Undergraduate and graduate students can book virtual office hours [here](https://calendar.app.google/sHV3EaRbgqg7X6nn9).
 
         I am not currently teaching during the Fall 2026 semester.
 
