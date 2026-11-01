@@ -18,7 +18,7 @@ sections:
 
         In addition to my work on resource ***quantities***, I maintain an active research agenda in the economics of environmental ***quality***, particularly water quality. In this work, I document [long-run trends in surface water quality](/research/texas/) and examine how policy design impacts nonpoint source pollution from both [agricultural landowners](/research/trading/) and residential households. Currently, I am estimating the effects of lead remediation efforts (e.g., lead service line replacements by water utilities) on health and behavioral outcomes.
       button:
-        text: View CV
+        text: View my CV
         url: /cv/
       headings:
         about: Biography
