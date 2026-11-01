@@ -32,13 +32,14 @@
   --hb-secondary-950-rgb: 56 46 21;
 }
 
-/* Download CV button: solid CU Gold with navy text (theme: a teal-to-purple
-   gradient with white text); a lighter gold on hover. */
-#about a[href$="cv.pdf"] {
+/* CV button (links to the CV page): solid CU Gold with navy text (theme: a
+   teal-to-purple gradient with white text); a lighter gold on hover. The
+   cv-button class is added in the resume-biography-3 block override. */
+#about a.cv-button {
   background: var(--color-primary-400);
   color: var(--hb-color-background);
 }
-#about a[href$="cv.pdf"]:hover {
+#about a.cv-button:hover {
   background: var(--color-primary-300);
 }
 
