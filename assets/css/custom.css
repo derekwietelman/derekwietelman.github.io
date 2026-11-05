@@ -182,22 +182,31 @@
 }
 
 /* Title: the same size as the Bio and Research page titles, with the
-   one-line intro centered under it. */
+   intro centered under it. */
 #contact .contact-title {
   margin-bottom: 0.75rem;
   font-size: 1.875rem;
   line-height: 2.25rem;
   text-align: center;
 }
-/* On phones the intro takes two lines; balance them so one word isn't left
-   on its own. */
+/* Intro: one paragraph per line, spaced like the Teaching page's lines (same
+   line height, half a line apart). If a line wraps on a phone, balance it so
+   one word isn't left on its own. Its email link looks like the Teaching
+   page's links (white, medium weight, white underline). */
 #contact .contact-intro {
   margin-bottom: 2.5rem;
   font-size: 1.125rem;
-  line-height: 1.6;
+  line-height: 1.75;
   text-align: center;
   text-wrap: balance;
   color: #fff;
+}
+#contact .contact-intro > p + p {
+  margin-top: 0.5lh;
+}
+#contact .contact-intro a {
+  font-weight: 500;
+  text-decoration: underline;
 }
 
 /* The card: each part has an icon and heading, with a divider between parts.
@@ -249,6 +258,7 @@
   }
   #contact .contact-intro {
     font-size: 1.25rem;
+    line-height: 1.8;
   }
 }
 

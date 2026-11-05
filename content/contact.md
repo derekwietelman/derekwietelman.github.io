@@ -13,11 +13,14 @@ sections:
     id: contact
     content:
       title: Contact
-      # Shown under the title. Also keeps Safari from offering to translate this
-      # page: it judges the language from the first text on the page, and this
-      # page otherwise starts with only the name (which reads as Dutch) and
-      # menu words. Keep it a full English sentence ("I'd" reads as Dutch).
-      intro: Questions and collaborations are always welcome.
+      # Shown under the title, one paragraph per line (blank line between),
+      # spaced like the Teaching page's lines. Also keeps Safari from offering
+      # to translate this page: it judges the language from the first text on
+      # the page, and this page otherwise starts with only the name (which
+      # reads as Dutch) and menu words. Keep the first line a full English
+      # sentence ("I'd" reads as Dutch).
+      intro: |-
+        I am typically most responsive via my official [university email address](mailto:derek.wietelman@colorado.edu).
       email_title: Email
       email: derek.wietelman@colorado.edu
       social_title: Find Me On
