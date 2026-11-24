@@ -17,7 +17,6 @@ hugoblox:
     doi: 10.1016/j.enpol.2019.01.048
 links:
 - type: pdf
-  label: Ungated PDF
   url: /files/Fraas_etal_2019.pdf
 # Old addresses of this page, which now redirect here.
 aliases:

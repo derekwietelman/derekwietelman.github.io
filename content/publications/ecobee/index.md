@@ -19,7 +19,6 @@ hugoblox:
     doi: 10.1257/app.20210618
 links:
 - type: pdf
-  label: Ungated PDF
   url: /files/Blonz_etal_2025.pdf
 - type: custom
   label: Appendix

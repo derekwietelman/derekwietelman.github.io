@@ -8,9 +8,11 @@
        coauthors gets "Title." with the period inside the quotes, as on the CV.
      - "(with …)" lists the coauthors, leaving out the site owner ("me"). Each
        name links to the coauthor's page from data/coauthors.yaml (website only).
+       Names stay on one line, except on phones (see the cv-name note below).
      - Published papers: journal name (italic on the site, bold italic on the
        CV; class cv-journal in custom.css), then volume(issue): pages from the
-       `publication:` fields, with the "Vol. " prefix dropped.
+       `publication:` fields, with the "Vol. " prefix dropped. On phones a page
+       range (cv-pages) is kept on one line.
      - Working papers: the `publication:` status text (e.g., "Pending
        submission" or "Conditionally accepted, *Journal*").
      - Buttons go on their own line, starting with "Abstract", which goes to the
@@ -29,8 +31,17 @@
 {{ range $item.Params.authors }}
   {{ if ne . "me" }}
     {{ $name := . }}
-    {{/* Non-breaking spaces keep each name on one line, as on the CV. */}}
-    {{ $shown := replace $name " " "&nbsp;" }}
+    {{/* Each name sits in a cv-name span. On wider screens custom.css keeps
+         the whole name on one line. On phones it may break only after the
+         first name: the rest is joined by non-breaking spaces, so a middle
+         initial stays with the last name ("Casey" / "J. Wichman"), as the
+         CV's "Casey J.~Wichman" tie does. */}}
+    {{ $parts := split $name " " }}
+    {{ $shown := index $parts 0 }}
+    {{ with after 1 $parts }}
+      {{ $shown = printf "%s %s" $shown (delimit . "&nbsp;") }}
+    {{ end }}
+    {{ $shown = printf "<span class=\"cv-name\">%s</span>" $shown }}
     {{ with index $links $name }}
       {{ $co = $co | append (printf "<a href=\"%s\" class=\"underline\">%s</a>" . $shown) }}
     {{ else }}
@@ -66,7 +77,7 @@
       <span class="cv-journal">{{ .name }}</span>
       {{- with .volume }} {{ replace (string .) "Vol. " "" }}{{ end -}}
       {{- with $item.Params.publication.issue }}({{ . }}){{ end -}}
-      {{- with $item.Params.publication.pages }}: {{ . }}{{ end -}}.
+      {{- with $item.Params.publication.pages }}: <span class="cv-pages">{{ . }}</span>{{ end -}}.
     {{- else -}}
       <span class="cv-status">{{ . | markdownify }}</span>.
     {{- end -}}

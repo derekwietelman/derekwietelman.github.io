@@ -6,8 +6,8 @@
 {{ $built := partial "functions/build_links" (dict "page" $page "is_list" $is_list) }}
 
 {{/* Site override (copied from the HugoBlox blox module): put the DOI button
-     ("Link") first, so the buttons follow the CV's order: Link, then PDF or
-     Ungated PDF, Appendix, Code. The other buttons keep their order from each
+     ("Link") first, so the buttons follow the CV's order: Link, then PDF,
+     Appendix, Code. The other buttons keep their order from each
      paper's `links:` list. The theme adds the DOI last. */}}
 {{ $built = (where $built "type" "doi") | append (where $built "type" "ne" "doi") }}
 

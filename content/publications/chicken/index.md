@@ -16,7 +16,6 @@ hugoblox:
     doi: 10.1016/j.jenvman.2017.01.009
 links:
 - type: pdf
-  label: Ungated PDF
   url: /files/Wietelman_Melstrom_2017.pdf
 # Old addresses of this page, which now redirect here.
 aliases:

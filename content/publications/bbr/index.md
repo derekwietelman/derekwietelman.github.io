@@ -10,6 +10,12 @@ publication_types:
 publication: Conditionally accepted, *Journal of the Association of Environmental & Resource Economists*
 abstract: 'Using price incentives to allocate scarce resources is a core tenet of economics but may result in unpalatable distributional outcomes. We analyze the efficacy of prices as a means of inducing water conservation during severe drought by studying the introduction of surcharges enacted within existing nonlinear rate structures. Embedding machine learning counterfactual prediction methods within a demand framework to isolate exogenous price variation, we find evidence that households exhibit a significant demand response despite the temporary nature of surcharges. However, further investigation reveals that surcharges alone cannot explain a majority of the conservation observed despite steep price increases. “Budget-based” rates undercut scarcity signals by shielding large users from binding price increases, and surcharges themselves do little to reduce the regressivity of water expenditures. Simpler rate structures can dominate along equity dimensions, and their progressivity can be enhanced via lump-sum transfers within the rate structure.'
 links:
+# RFF Working Paper 25-07. A custom link labeled "Link" (the DOI button's
+# label and icon) so it reads like the published papers' Link buttons.
+- type: custom
+  label: Link
+  icon: hero/link
+  url: https://www.rff.org/publications/working-papers/conservation-and-distributional-consequences-of-pricing-scarce-water-during-droughts/
 - type: pdf
   url: /files/jmp_dcw.pdf
 # Old addresses of this page, which now redirect here.

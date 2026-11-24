@@ -19,7 +19,6 @@ hugoblox:
     doi: 10.1016/j.scitotenv.2020.137962
 links:
 - type: pdf
-  label: Ungated PDF
   url: /files/Kuwayama_etal_2020.pdf
 # Old addresses of this page, which now redirect here.
 aliases:

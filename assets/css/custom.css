@@ -442,6 +442,31 @@ article:has(> main > .max-w-prose.grid) {
 #publications .view-citation .flex {
   text-indent: 0;
 }
+/* Phones (below the 640px breakpoint used for the citation font size): a
+   1em indent, so lines aren't squeezed into a narrow column, and 1rem (16px)
+   text instead of 1.125rem (18px). */
+@media (max-width: 639px) {
+  #working-papers .view-citation,
+  #publications .view-citation {
+    padding-left: 1em;
+    text-indent: -1em;
+    font-size: 1rem;
+  }
+}
+/* Coauthor names (cv-name spans from citation.html): kept whole on wider
+   screens. On phones they may break after the first name only; the rest of
+   the name is joined by non-breaking spaces in the HTML. */
+@media (min-width: 640px) {
+  .view-citation .cv-name {
+    white-space: nowrap;
+  }
+}
+/* Phones: don't split a page range at its dash ("467–" / "480."). */
+@media (max-width: 639px) {
+  .view-citation .cv-pages {
+    white-space: nowrap;
+  }
+}
 /* markdownify wraps a one-line status in <p>; keep it inline. */
 .view-citation .cv-status p {
   display: inline;
