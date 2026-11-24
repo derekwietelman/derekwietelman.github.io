@@ -467,6 +467,26 @@ article:has(> main > .max-w-prose.grid) {
     white-space: nowrap;
   }
 }
+
+/* Phones: center the Research page's section headings. "Peer-Reviewed
+   Publications" wraps onto two lines there, and wrapped lines would
+   otherwise sit flush left under the centered "Working Papers". */
+@media (max-width: 639px) {
+  #working-papers h2,
+  #publications h2 {
+    text-align: center;
+  }
+}
+
+/* Phones: smaller titles on paper pages (/research/<name>/), 28px instead
+   of the theme's 36px, so a long title takes about four lines instead of
+   seven. The paper-title class is set in layouts/single.html. */
+@media (max-width: 639px) {
+  .paper-title {
+    font-size: 1.75rem;
+    line-height: 2.125rem;
+  }
+}
 /* markdownify wraps a one-line status in <p>; keep it inline. */
 .view-citation .cv-status p {
   display: inline;

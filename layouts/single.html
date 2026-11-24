@@ -1,6 +1,7 @@
 {{/* Override of the theme's single page template: the publication Type ("Working Paper", "Peer-Reviewed Publication")
      is plain text instead of a link to the type's list page, and the author line has no avatar photos and no space
-     before commas. Otherwise identical to the theme's copy. */}}
+     before commas. The title has a paper-title class, so custom.css can make it smaller on phones. Otherwise identical to
+     the theme's copy. */}}
 {{ define "main" }}
 
 {{ $pub_type_csl := "" }}
@@ -40,7 +41,7 @@
         {{ end }}
       {{ end }}
 
-      <h1 class="{{ if $has_overlap_icon }}mt-12{{ else }}mt-2{{ end }} text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100" data-pagefind-meta="title" data-pagefind-body>
+      <h1 class="paper-title {{ if $has_overlap_icon }}mt-12{{ else }}mt-2{{ end }} text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100" data-pagefind-meta="title" data-pagefind-body>
         {{/* Inline icon before title if specified */}}
         {{ if $cover }}
           {{ $icon_config := .Params.cover.icon | default (dict) }}
