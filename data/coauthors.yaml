@@ -1,0 +1,26 @@
+# Coauthor links used on the Research page (website only, not on the CV).
+# Each name must match the spelling in a paper's `authors:` list exactly.
+# Rule: link a personal research website when the coauthor has one;
+# otherwise link their official institutional profile. Checked 2026-11-24.
+
+# Personal research websites
+Casey J. Wichman: https://www.caseyjwichman.com/
+Daniel A. Brent: https://www.danielbrent.com/
+David Newburn: https://sites.google.com/umd.edu/dnewburn
+Haoluan Wang: https://haoluanwang.com/
+Joshua Blonz: https://www.joshua.blonz.com/
+Richard T. Melstrom: https://melstrom.github.io/home/   # site home page (melstrom.github.io alone is a 404); found by Derek
+Sheila M. Olmstead: https://sites.google.com/view/sheilaolmstead
+Youngho Kim: https://www.econyoungkim.com/
+Yusuke Kuwayama: https://www.yusuke-kuwayama.com/
+
+# Institutional profiles (no personal website found, or it is out of date)
+Arthur G. Fraas: https://www.rff.org/people/arthur-g-fraas/            # Resources for the Future
+Ashley Clark: https://oneill.indiana.edu/faculty-research/directory/profiles/faculty/full-time/clark-ashley.html   # IU O'Neill School
+Erik Lichtenberg: https://agnr.umd.edu/about/directory/erik-lichtenberg   # UMD College of Agriculture & Natural Resources
+Jiameng Zheng: https://www.lsuagcenter.com/profiles/jiamengzheng       # LSU AgCenter
+John D. Graham: https://oneill.indiana.edu/faculty-research/directory/profiles/faculty/full-time/graham-john.html   # IU O'Neill School
+John Rupp: https://oneill.indiana.edu/faculty-research/directory/profiles/faculty/full-time/rupp-john.html          # IU O'Neill School
+Karen Palmer: https://www.rff.org/people/karen-l-palmer/               # Resources for the Future
+Michelle H.W. Lee: https://discovery.nus.edu.sg/21051-hung-wai-michelle-lee/publications   # NUS College (her personal site, michellehwlee.netlify.app, still says IU Ph.D. candidate; link supplied by Derek)
+Randall W. Lutter: https://manhattan.institute/person/randall-lutter   # Manhattan Institute (no UVA page found)
