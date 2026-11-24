@@ -20,6 +20,7 @@ hugoblox:
     doi: 10.1016/j.enpol.2018.12.034
 links:
 - type: pdf
+  label: Ungated PDF
   url: /files/Lee_etal_2019.pdf
 # Old addresses of this page, which now redirect here.
 aliases:
