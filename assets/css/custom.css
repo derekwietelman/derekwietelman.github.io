@@ -418,6 +418,35 @@ article:has(> main > .max-w-prose.grid) {
   color: #fff;
 }
 
+/* Journal names in Research page entries: italic. The CV uses bold italic,
+   but bold reads much heavier as white text on the navy background, so the
+   site uses regular-weight italic. cv-journal wraps a published paper's
+   journal; in a working paper's status ("Conditionally accepted, *Journal*")
+   the journal is the <em>. Set by layouts/_partials/views/citation.html. */
+#working-papers .view-citation .cv-journal,
+#publications .view-citation .cv-journal,
+#working-papers .view-citation .cv-status em,
+#publications .view-citation .cv-status em {
+  font-style: italic;
+  font-weight: normal;
+}
+
+/* Hanging indent, as on the CV: an entry's first line starts at the margin
+   and its later lines (and the buttons below) are indented 2em. */
+#working-papers .view-citation,
+#publications .view-citation {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+#working-papers .view-citation .flex,
+#publications .view-citation .flex {
+  text-indent: 0;
+}
+/* markdownify wraps a one-line status in <p>; keep it inline. */
+.view-citation .cv-status p {
+  display: inline;
+}
+
 /* PDF/DOI buttons under each citation: slightly larger than the theme's
    0.75rem (12px). Their icons scale with the text. */
 #working-papers .hb-attachment-link-small,

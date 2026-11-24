@@ -1,29 +1,62 @@
 {{/* Site override (copied from the HugoBlox blox module) for the Research page.
-     Changes: the paper title is plain text in quotation marks instead of a link, and each entry
-     starts with an "Abstract" button that goes to the paper's own page
-     (website only; the CV has no such link). */}}
+     Each entry follows the CV's citation format (modeled on Louis Preonas's CV):
+
+       "Title" (with A, B, and C). 2025. Journal 17(1): 90–125.
+       "Title" (with A and B). 2025. Conditionally accepted, Journal.
+
+     - The title is plain text in quotation marks, not a link. A paper with no
+       coauthors gets "Title." with the period inside the quotes, as on the CV.
+     - "(with …)" lists the coauthors, leaving out the site owner ("me").
+     - Published papers: journal name (bold italic, as on the CV; class
+       cv-journal in custom.css), then volume(issue): pages from the
+       `publication:` fields, with the "Vol. " prefix dropped.
+     - Working papers: the `publication:` status text (e.g., "Pending
+       submission" or "Conditionally accepted, *Journal*").
+     - Buttons go on their own line, starting with "Abstract", which goes to the
+       paper's own page (website only; the CV has no such link). */}}
 {{ $item := .item }}
 {{ $year_value := $item.Params.event_start | default $item.Date }}
 {{ $year := (time $year_value).Format "2006" }}
 {{ $has_attachments := partial "functions/has_attachments" $item }}
-{{ $pub := partial "functions/resolve_publication.html" $item }}
 {{ $top_award := "" }}
 {{ with $item.Params.awards }}{{ $top_award = index . 0 }}{{ end }}
+
+{{/* Coauthors: everyone in `authors:` except the site owner. */}}
+{{ $co := slice }}
+{{ range $item.Params.authors }}{{ if ne . "me" }}{{ $co = $co | append . }}{{ end }}{{ end }}
+{{ $n := len $co }}
+{{ $with := "" }}
+{{ if eq $n 1 }}
+  {{ $with = index $co 0 }}
+{{ else if eq $n 2 }}
+  {{ $with = printf "%s and %s" (index $co 0) (index $co 1) }}
+{{ else if gt $n 2 }}
+  {{ $with = printf "%s, and %s" (delimit (first (sub $n 1) $co) ", ") (index $co (sub $n 1)) }}
+{{ end }}
+
+{{/* Title: "Title" before "(with …)"; "Title." when there are no coauthors. */}}
+{{ $title := $item.Title }}
+{{ $ends := in (slice "?" "!") (substr $title -1) }}
 
 <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
   <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
 
-  {{/* APA Style */}}
-  {{ if eq (site.Params.hugoblox.content.citations.style | default "apa") "apa" }}
-
-  <span class="article-metadata li-cite-author">
-    {{ partial "page_metadata_authors" $item }}
-  </span>
-  ({{- $year -}}).
-  {{- /* Title in quotation marks, as on the CV; the period goes inside the closing quote unless the title ends in ? or ! */ -}}
-  {{ $title := $item.Title }}{{ if not (in (slice "?" "!") (substr $title -1)) }}{{ $title = printf "%s." $title }}{{ end }}
-  &ldquo;{{ $title }}&rdquo;
-  {{ with $pub.display_short }}{{- . | markdownify -}}.{{ end }}
+  {{- if $with -}}
+    &ldquo;{{ $title }}&rdquo; (with {{ $with }}).
+  {{- else -}}
+    &ldquo;{{ $title }}{{ if not $ends }}.{{ end }}&rdquo;
+  {{- end }}
+  {{ $year }}.
+  {{ with $item.Params.publication }}
+    {{- if reflect.IsMap . -}}
+      <span class="cv-journal">{{ .name }}</span>
+      {{- with .volume }} {{ replace (string .) "Vol. " "" }}{{ end -}}
+      {{- with $item.Params.publication.issue }}({{ . }}){{ end -}}
+      {{- with $item.Params.publication.pages }}: {{ . }}{{ end -}}.
+    {{- else -}}
+      <span class="cv-status">{{ . | markdownify }}</span>.
+    {{- end -}}
+  {{ end }}
   {{ with $top_award }}
     <span class="ml-1">{{ partial "components/award_badge.html" (dict "award" . "page" $item "variant" "inline") }}</span>
   {{ end }}
@@ -35,29 +68,4 @@
     </a>
     {{ if $has_attachments }}{{ partial "page_links" (dict "page" $item "is_list" 1) }}{{ end }}
   </div>
-
-  {{/* MLA Style */}}
-  {{ else }}
-
-  <span class="article-metadata li-cite-author">
-    {{ partial "page_metadata_authors" $item }}.
-  </span>
-  {{- /* Title in quotation marks, as on the CV; the period goes inside the closing quote unless the title ends in ? or ! */ -}}
-  {{ $title := $item.Title }}{{ if not (in (slice "?" "!") (substr $title -1)) }}{{ $title = printf "%s." $title }}{{ end }}
-  &ldquo;{{ $title }}&rdquo;
-  {{ with $pub.display_short }}{{- . | markdownify -}},{{ end }}
-  {{- $year -}}.
-  {{ with $top_award }}
-    <span class="ml-1">{{ partial "components/award_badge.html" (dict "award" . "page" $item "variant" "inline") }}</span>
-  {{ end }}
-
-  <div class="flex flex-wrap space-x-3">
-    <a class="hb-attachment-link hb-attachment-link-small" href="{{ $item.RelPermalink }}">
-      {{ partial "functions/get_icon" (dict "name" "hero/bars-3-bottom-left" "attributes" "style=\"height: 1em\" class='inline-block'") }}
-      Abstract
-    </a>
-    {{ if $has_attachments }}{{ partial "page_links" (dict "page" $item "is_list" 1) }}{{ end }}
-  </div>
-
-  {{ end }}
 </div>
