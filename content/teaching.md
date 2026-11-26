@@ -25,7 +25,7 @@ sections:
       text: |-
         Undergraduate and graduate students can [book virtual office hours here](https://calendar.app.google/sHV3EaRbgqg7X6nn9).
 
-        I am not currently teaching during the Fall 2026 semester.
+        I am not teaching during the Fall 2026 semester.
 
         My [current CV](/cv/) lists a full history of my teaching experience.
 

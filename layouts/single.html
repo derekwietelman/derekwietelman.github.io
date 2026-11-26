@@ -1,6 +1,7 @@
 {{/* Override of the theme's single page template: the publication Type ("Working Paper", "Peer-Reviewed Publication")
      is plain text instead of a link to the type's list page, and the author line has no avatar photos and no space
-     before commas. The title has a paper-title class, so custom.css can make it smaller on phones. Otherwise identical to
+     before commas. The title has a paper-title class, so custom.css can make it smaller on phones. The Publication row
+     follows the CV's format, and is labeled "Status" on working papers (see the note there). Otherwise identical to
      the theme's copy. */}}
 {{ define "main" }}
 
@@ -251,9 +252,22 @@
           </div>
         {{ end }}
 
+        {{/* Site change: a working paper's row is labeled "Status" (its `publication:` is a status such as
+             "Pending submission"). A published paper's row follows the CV: "Journal 17(1): 90–125", with the
+             "Vol. " prefix dropped, as on the Research page (layouts/_partials/views/citation.html). */}}
         {{ if not $pub.is_empty }}
-          <div class="font-bold text-2xl">{{ i18n "publication" }}</div>
+          <div class="font-bold text-2xl">{{ if eq $pub_type_csl "article" }}Status{{ else }}{{ i18n "publication" }}{{ end }}</div>
+          {{ with .Params.publication }}
+            {{ if reflect.IsMap . }}
+          <div><em>{{ .name }}</em>
+            {{- with .volume }} {{ replace (string .) "Vol. " "" }}{{ end -}}
+            {{- with $.Params.publication.issue }}({{ . }}){{ end -}}
+            {{- with $.Params.publication.pages }}: {{ . }}{{ end -}}
+          </div>
+            {{ else }}
           <div>{{ $pub.display | markdownify }}{{ with $pub.publisher }}. {{ . | markdownify }}{{ end }}</div>
+            {{ end }}
+          {{ end }}
         {{ end }}
 
         {{/* Work-level flags — independent of whether a venue is set, so preprints can still surface OA/peer-review status. */}}

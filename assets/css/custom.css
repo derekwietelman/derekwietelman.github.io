@@ -500,8 +500,9 @@ article:has(> main > .max-w-prose.grid) {
   line-height: 1.375rem;
 }
 
-/* Hide the profile link icons under the name/affiliation; they're in the
-   Contact section's "Find me on" instead. (Still shown on publication pages.) */
+/* Hide the profile link icons under the name/affiliation; they're on the
+   Contact page's "Find Me On" instead. (These icons, from data/authors/me.yaml,
+   appear nowhere else on the site.) */
 #about .flex.flex-wrap.justify-center.gap-4 {
   display: none;
 }

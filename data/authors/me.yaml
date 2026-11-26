@@ -12,7 +12,7 @@ bio: |
 links:
   - icon: at-symbol
     url: mailto:derek.wietelman@colorado.edu
-    label: E-mail Me
+    label: Email
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=4fMH-1cAAAAJ
     label: Google Scholar
