@@ -4,6 +4,8 @@
 # `![description](teaching/file.jpg "Caption")` on its own line. Image
 # files go in `assets/media/teaching/`.
 title: Teaching
+# Search-result and link-preview text for this page (not shown on the page).
+description: "Office hours and teaching."
 type: landing
 # Old address of this page (it was Office Hours until 2026-10-30), which now redirects here.
 aliases:

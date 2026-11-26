@@ -3,6 +3,8 @@
 # heading) with a photo beside it (block defined in layouts/_partials/hbx/blocks/contact-photo/).
 # Photo files go in `assets/media/contact/`.
 title: Contact
+# Search-result and link-preview text for this page (not shown on the page).
+description: "Email, mailing address, and profile links."
 type: landing
 # Keep it out of the theme's page list in the phone menu on paper pages.
 sidebar:

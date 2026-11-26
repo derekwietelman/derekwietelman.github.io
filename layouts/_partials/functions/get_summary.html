@@ -1,8 +1,8 @@
-{{/* Override of the theme's get_summary: same fallback order (summary > description > .Summary), but without
-     the abstract, so paper pages use the site-wide description (params.yaml) in page descriptions and link
-     previews like every other page. A front matter value is rendered from Markdown to plain text, so *italics*
-     don't show up as literal asterisks. */}}
-{{ $summary := .Params.summary | default .Params.description }}
+{{/* Override of the theme's get_summary: same fallback order (summary > description > abstract > .Summary),
+     so each main page uses its own `description` and each paper page its abstract in search results and link
+     previews; pages with none get the site-wide description (params.yaml). A front matter value is rendered
+     from Markdown to plain text, so *italics* don't show up as literal asterisks. */}}
+{{ $summary := .Params.summary | default .Params.description | default .Params.abstract }}
 {{ with $summary }}
   {{ $summary = . | markdownify | plainify | htmlUnescape }}
 {{ else }}

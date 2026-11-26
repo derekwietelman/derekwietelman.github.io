@@ -4,6 +4,8 @@
 # `assets/media/cv/`. The "Last updated" month fills itself in from the date
 # the CV file was last committed (layouts/_shortcodes/cv-updated.html).
 title: CV
+# Search-result and link-preview text for this page (not shown on the page).
+description: "Current curriculum vitae."
 type: landing
 # Keep it out of the theme's page list in the phone menu on paper pages.
 sidebar:

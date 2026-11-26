@@ -5,6 +5,8 @@
 # the paragraph it goes with (phones show it there; wide screens put it beside
 # that paragraph). Image files go in `assets/media/bio/`.
 title: Bio
+# Search-result and link-preview text for this page (not shown on the page).
+description: "Extended biography."
 type: landing
 # Keep it out of the theme's page list in the phone menu on paper pages.
 sidebar:
