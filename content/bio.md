@@ -26,5 +26,5 @@ sections:
 
         ![Two elk standing on a paved trail beside a wooden fence, with autumn aspens behind](bio/lake-estes-elk.jpg "Two Rocky Mountain elk join me for an autumn run around Lake Estes.")
 
-        I live in the Denver metro area with my wife, four-year-old daughter, and two cats. I enjoy baseball (especially sabermetrics), trying out new vegetarian recipes, and searching for kid-friendly hikes along the Front Range. I’m always happy to talk about research, collaborations, or good trail recommendations, so [feel free to reach out](/contact/).
+        I live in the Denver metro area with my wife, four-year-old daughter, and two cats. I enjoy baseball (especially sabermetrics), trying out new plant-based recipes, and searching for kid-friendly hikes along the Front Range. I’m always happy to talk about research, potential collaborations, or good trail recommendations, so [feel free to reach out](/contact/).
 ---

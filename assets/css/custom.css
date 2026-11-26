@@ -500,6 +500,53 @@ article:has(> main > .max-w-prose.grid) {
   line-height: 1.375rem;
 }
 
+/* Phones only: bigger tap areas for the paper buttons (Abstract, Link, PDF,
+   Appendix, Code) on the Research page and paper pages, with no visible
+   change. An invisible layer extends each button 10px up and down and 6px to
+   each side (about 40px tall instead of 20-22px). Where the buttons wrap onto
+   two rows (a Research page entry, or a paper page on the narrowest phones),
+   the rows get more space between them so the enlarged areas don't overlap:
+   14px more on the Research page; on paper pages each button's bottom margin
+   goes from 6px to 16px (also 10px more space below the row). */
+@media (max-width: 639px) {
+  .hb-attachment-link {
+    position: relative;
+  }
+  .hb-attachment-link::after {
+    content: "";
+    position: absolute;
+    inset: -10px -6px;
+  }
+  #working-papers .view-citation .flex-wrap,
+  #publications .view-citation .flex-wrap {
+    row-gap: 14px;
+  }
+  .hb-attachment-link-large {
+    margin-bottom: 16px;
+  }
+}
+
+/* Menu button (☰, shown below 1024px wide): the icon is 24px square; padding
+   with an equal negative margin makes the tappable area 44px square (Apple's
+   recommended minimum) without moving or resizing the icon. */
+@media (max-width: 1023px) {
+  label[for="nav-toggle"] {
+    padding: 10px;
+    margin: -10px;
+  }
+}
+
+/* Paper pages: the ← → arrows on the links to the previous and next paper
+   (theme partial components/next-in-series.html) are dark gray in the theme,
+   nearly invisible on the navy background. CU Gold, like the site's other
+   accents; the lighter gold on hover, as on the CV button. */
+.no-prose a.group > span.transition-transform {
+  color: var(--color-primary-400);
+}
+.no-prose a.group:hover > span.transition-transform {
+  color: var(--color-primary-300);
+}
+
 /* Hide the profile link icons under the name/affiliation; they're on the
    Contact page's "Find Me On" instead. (These icons, from data/authors/me.yaml,
    appear nowhere else on the site.) */

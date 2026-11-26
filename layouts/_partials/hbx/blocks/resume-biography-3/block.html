@@ -3,7 +3,8 @@
      an arrow after its text instead of a download icon before it, since it links to the CV page rather than the
      PDF. The profile icon links use their `label`
      (when set) for screen readers instead of the icon's file name, and the name is marked translate="no" (see
-     layouts/_partials/hooks/body-end/no-translate-name.html). Otherwise identical to the theme's copy. */}}
+     layouts/_partials/hooks/body-end/no-translate-name.html). The "medium" photo is generated at 600px (see the size
+     map). Otherwise identical to the theme's copy. */}}
 {{/* Hugo Blox: Biography 3 */}}
 {{/* Documentation: https://hugoblox.com/blocks/ */}}
 {{/* License: https://github.com/HugoBlox/kit/blob/main/LICENSE.md */}}
@@ -61,7 +62,9 @@
 {{ $name_class := index $name_class_map $name_size | default (index $name_class_map "lg") }}
 
 {{/* Size mappings optimized for 2025 standards: display_size -> [display_px, generation_px] */}}
-{{ $size_map := dict "small" (slice "150" "300") "medium" (slice "200" "400") "large" (slice "320" "640") "xl" (slice "400" "800") "xxl" (slice "500" "1000") }}
+{{/* Site change: "medium" (the homepage photo) is generated at 600px, 3x its 200px display size, so it stays
+     sharp on 3x phone screens (theme: 400px). */}}
+{{ $size_map := dict "small" (slice "150" "300") "medium" (slice "200" "600") "large" (slice "320" "640") "xl" (slice "400" "800") "xxl" (slice "500" "1000") }}
 {{ $size_config := index $size_map $avatar_size | default (index $size_map "large") }}
 {{ $display_size := index $size_config 0 }}
 {{ $generation_size := index $size_config 1 }}
