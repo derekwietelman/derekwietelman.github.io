@@ -47,14 +47,22 @@
    tablets (already narrower than the caps) are unaffected. */
 
 /* Biography: no line-length cap, so the text fills its column. Font is
-   larger than the theme's 1rem (phones) / 1.125rem (larger screens). */
+   larger than the theme's 1rem (phones) / 1.125rem (larger screens). Line
+   spacing matches the Bio, CV and Teaching pages (1.75 on phones, 1.8 from
+   640px; the theme's was 1.625). */
 #about .prose {
   max-width: none;
   font-size: 1.125rem;
 }
+#about .prose p {
+  line-height: 1.75;
+}
 @media (min-width: 640px) {
   #about .prose {
     font-size: 1.25rem;
+  }
+  #about .prose p {
+    line-height: 1.8;
   }
 }
 
@@ -227,13 +235,19 @@
 #contact .contact-heading {
   margin-bottom: 1rem;
 }
+/* Headings: clearly smaller than the page title (1.875rem), 1.25rem on
+   phones and 1.375rem from 640px (they were 1.5rem / 1.75rem, almost as large
+   as the title). The 48px icon circle sets each heading row's height, so the
+   card's height doesn't change. */
 #contact .contact-heading h3 {
-  font-size: min(1.5rem, 6.4vw);
+  font-size: min(1.25rem, 5.6vw);
   line-height: 1.25;
 }
-/* Email address: wraps instead of overflowing on the narrowest phones. */
+/* Email address: underlined like every other text link on the site, and
+   wraps instead of overflowing on the narrowest phones. */
 #contact .contact-email {
   overflow-wrap: anywhere;
+  text-decoration: underline;
 }
 /* Profile icons: white (theme: gray-blue); they still turn gold on hover. */
 #contact .contact-links > a:not(:hover) {
@@ -254,7 +268,7 @@
     font-size: 1.25rem;
   }
   #contact .contact-heading h3 {
-    font-size: 1.75rem;
+    font-size: 1.375rem;
   }
   #contact .contact-intro {
     font-size: 1.25rem;
@@ -348,16 +362,44 @@
   }
 }
 
-/* Working papers & publications: theme caps the list at 48rem (768px). */
+/* Working papers & publications: theme caps the list at 48rem (768px). At
+   68rem (1088px) lines ran about 140 characters on wide screens, too long to
+   scan easily; 53rem (848px) is about as wide as a paper page's abstract. */
 #working-papers .container.max-w-3xl,
 #publications .container.max-w-3xl {
-  max-width: 68rem; /* 1088px */
+  max-width: 53rem; /* 848px */
 }
 
 /* Paper pages: theme caps the abstract/type/date block at 65 characters,
    so let it fill the page column instead. */
 article main > .max-w-prose.grid {
   max-width: none;
+}
+
+/* Paper pages: the abstract, type and publication text at the size and white
+   used on the other pages (1.125rem on phones, 1.25rem from 640px; the theme's
+   1rem in a pale blue was smaller than the next/previous paper links below
+   it). The labels (Abstract, Type, Status/Publication) are a little smaller
+   than the theme's 1.5rem, so they don't overpower the text. The paper-details
+   class is set in layouts/single.html. */
+.paper-details {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #fff;
+}
+.paper-details > .font-bold.text-2xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+@media (min-width: 640px) {
+  .paper-details {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+  .paper-details > .font-bold.text-2xl {
+    font-size: 1.375rem;
+    line-height: 2.25rem;
+  }
 }
 
 /* Paper pages: on wide screens the theme reserves an empty 16rem column on
@@ -461,11 +503,10 @@ article:has(> main > .max-w-prose.grid) {
     white-space: nowrap;
   }
 }
-/* Phones: don't split a page range at its dash ("467–" / "480."). */
-@media (max-width: 639px) {
-  .view-citation .cv-pages {
-    white-space: nowrap;
-  }
+/* Don't split a page range at its dash ("467–" / "480."). Phones only until
+   the list was narrowed to 53rem, when "90–" / "125." split on wide screens. */
+.view-citation .cv-pages {
+  white-space: nowrap;
 }
 
 /* Phones: center the Research page's section headings. "Peer-Reviewed
@@ -536,6 +577,35 @@ article:has(> main > .max-w-prose.grid) {
   }
 }
 
+/* Header on wide screens (1024px+, where the full menu shows): the name and
+   menu sit within the same 68rem column as the Bio, Contact and paper pages,
+   the name at its left edge (level with the text below) and the menu ending
+   at its right edge. The theme pinned the name 12px from the window's edge
+   and put the menu about 100px right of the page's center. Centering the
+   menu on the page was tried, but left only ~27px between the name and the
+   menu from 1280px up. */
+@media (min-width: 1024px) {
+  #site-header .navbar {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  #site-header #nav-menu {
+    margin-left: auto;
+  }
+}
+
+/* Menu: the page you're on is shown in CU Gold with a gold underline (the
+   theme marks it with an `active` class but gives it no style). Paper pages
+   (/research/<name>/, which have the paper-title heading) count as Research. */
+.nav-link.active,
+body:has(.paper-title) .nav-link[href="/research/"] {
+  color: var(--color-primary-400);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.4em;
+}
+
 /* Paper pages: the ← → arrows on the links to the previous and next paper
    (theme partial components/next-in-series.html) are dark gray in the theme,
    nearly invisible on the navy background. CU Gold, like the site's other
@@ -545,6 +615,11 @@ article:has(> main > .max-w-prose.grid) {
 }
 .no-prose a.group:hover > span.transition-transform {
   color: var(--color-primary-300);
+}
+/* The dates under those links: the theme's neutral gray was the one text on
+   the site below the 4.5:1 contrast minimum; use the author line's color. */
+.no-prose a.group span.text-xs {
+  color: rgb(187 195 219);
 }
 
 /* Hide the profile link icons under the name/affiliation; they're on the
@@ -607,6 +682,20 @@ article:has(> main > .max-w-prose.grid) {
 @media (max-width: 767px) {
   #working-papers .items-center.px-6,
   #publications .items-center.px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+/* Phones: the Bio, CV and Teaching pages and the paper pages get the same
+   1rem side padding as the Home, Research and Contact pages (theme: 1.5rem),
+   so text starts the same distance from the screen edge on every page. If
+   this changes, change `image_sizes` in content/cv.md and content/teaching.md
+   to match. */
+@media (max-width: 639px) {
+  #bio .flex-col.px-6,
+  #cv .flex-col.px-6,
+  #teaching .flex-col.px-6,
+  article main:has(> .paper-details) {
     padding-left: 1rem;
     padding-right: 1rem;
   }

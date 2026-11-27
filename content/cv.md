@@ -10,9 +10,9 @@ type: landing
 # Keep it out of the theme's page list in the phone menu on paper pages.
 sidebar:
   hidden: true
-# Photo width for the image hook: full width less the side padding on phones,
+# Photo width for the image hook: full width less the 16px side padding on phones,
 # 549px (34.3rem, set in custom.css) on larger screens.
-image_sizes: "(max-width: 596px) calc(100vw - 48px), 549px"
+image_sizes: "(max-width: 580px) calc(100vw - 32px), 549px"
 
 sections:
   - block: markdown

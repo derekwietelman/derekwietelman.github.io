@@ -7,7 +7,8 @@
      - The title is plain text in quotation marks, not a link. A paper with no
        coauthors gets "Title." with the period inside the quotes, as on the CV.
      - "(with …)" lists the coauthors, leaving out the site owner ("me"). Each
-       name links to the coauthor's page from data/coauthors.yaml (website only).
+       name links to the coauthor's page from data/coauthors.yaml (website only),
+       opening in a new tab like the site's other outside links.
        Names stay on one line, except on phones (see the cv-name note below).
      - Published papers: journal name (italic on the site, bold italic on the
        CV; class cv-journal in custom.css), then volume(issue): pages from the
@@ -43,7 +44,7 @@
     {{ end }}
     {{ $shown = printf "<span class=\"cv-name\">%s</span>" $shown }}
     {{ with index $links $name }}
-      {{ $co = $co | append (printf "<a href=\"%s\" class=\"underline\">%s</a>" . $shown) }}
+      {{ $co = $co | append (printf "<a href=\"%s\" class=\"underline\" target=\"_blank\" rel=\"noopener\">%s</a>" . $shown) }}
     {{ else }}
       {{ $co = $co | append $shown }}
     {{ end }}

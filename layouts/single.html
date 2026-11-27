@@ -1,6 +1,8 @@
 {{/* Override of the theme's single page template: the publication Type ("Working Paper", "Peer-Reviewed Publication")
      is plain text instead of a link to the type's list page, and the author line has no avatar photos and no space
-     before commas. The title has a paper-title class, so custom.css can make it smaller on phones. The Publication row
+     before commas; coauthor names link to their pages (data/coauthors.yaml). The title has a paper-title class, so
+     custom.css can make it smaller on phones. The abstract/type/publication block has a paper-details class, so
+     custom.css can set its text and label sizes. The Publication row
      follows the CV's format, and is labeled "Status" on working papers (see the note there). Otherwise identical to
      the theme's copy. */}}
 {{ define "main" }}
@@ -83,12 +85,19 @@
           {{ .Store.Set "has_alpine" true }}
         {{ end }}
 
-        {{/* Authors: no avatar photos, and each comma sits directly after the name (the theme put a gap before it). */}}
+        {{/* Authors: no avatar photos, and each comma sits directly after the name (the theme put a gap before it).
+             Site change: a coauthor listed in data/coauthors.yaml links to their page, opening in a new tab, as on the
+             Research page (the site owner's own name stays plain text). */}}
         {{ $num_authors := len .Params.authors }}
+        {{ $coauthor_links := hugo.Data.coauthors | default dict }}
         {{ range $i, $slug := .Params.authors }}
           {{ $profile := partial "functions/get_author_profile" $slug }}
           <span class="{{ if $i }}mr-1{{ else }}mx-1{{ end }}">
-          {{- $profile.title -}}
+          {{- with and (ne $slug "me") (index $coauthor_links $slug) -}}
+            <a href="{{ . }}" class="underline" target="_blank" rel="noopener">{{ $profile.title }}</a>
+          {{- else -}}
+            {{- $profile.title -}}
+          {{- end -}}
           {{/* Add author note tooltip if available */}}
           {{- if isset $.Params "author_notes" -}}
             {{- with (index $.Params.author_notes $i) -}}
@@ -235,7 +244,7 @@
       {{/* EVENT / PUBLICATION METADATA */}}
       {{ $pub := partial "functions/resolve_publication.html" . }}
       {{ if .Params.abstract | or (eq .Type "publications") | or (eq .Type "events") }}
-        <div class="max-w-prose grid grid-cols-1 md:grid-cols-[200px_auto] gap-4 my-6">
+        <div class="paper-details max-w-prose grid grid-cols-1 md:grid-cols-[200px_auto] gap-4 my-6">
 
         {{ if .Params.abstract }}
           <div class="font-bold text-2xl">{{ i18n "abstract" }}</div>
